@@ -26,8 +26,8 @@ export default defineConfig({
     ['list'],
   ],
 
-  // Global timeout: 15 minutes for full test run
-  globalTimeout: 15 * 60 * 1000,
+  // Global timeout: 30 minutes for full test run (388+ URLs)
+  globalTimeout: 30 * 60 * 1000,
 
   // Shared settings for all projects
   use: {
@@ -56,8 +56,8 @@ export default defineConfig({
     userAgent: 'Viking-Pricing-Monitor/1.0 (Automated Testing)',
   },
 
-  // Test timeout per individual test
-  timeout: 30000,
+  // Test timeout per individual test (0 = no timeout, managed by globalTimeout)
+  timeout: 0,
 
   // Expect timeout
   expect: {

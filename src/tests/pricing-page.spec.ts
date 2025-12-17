@@ -58,6 +58,11 @@ test.describe('Viking Pricing Page Monitor', () => {
       return;
     }
 
+    // Set dynamic timeout: ~15 seconds per URL + 60 second buffer
+    const dynamicTimeout = (pricingUrls.length * 15000) + 60000;
+    test.setTimeout(dynamicTimeout);
+    console.log(`Testing ${pricingUrls.length} URLs with ${Math.round(dynamicTimeout / 60000)} minute timeout`);
+
     const results: PricingPageResult[] = [];
 
     // Test each URL
