@@ -2,12 +2,14 @@
  * Sitemap Crawler - Discovers pricing URLs from Viking sitemaps
  *
  * Handles:
- * - Main sitemap.xml parsing
+ * - Local sitemap.xml files (preferred)
+ * - Remote sitemap.xml fetching (fallback)
  * - Sitemap index files (nested sitemaps)
  * - URL filtering for pricing pages
- * - Redirect detection
  */
 
+import * as fs from 'fs/promises';
+import * as path from 'path';
 import { XMLParser } from 'fast-xml-parser';
 import config from '../config.js';
 
@@ -45,16 +47,36 @@ export class SitemapCrawler {
 
   /**
    * Crawl all configured sitemaps and discover pricing URLs
+   * Checks local files first, then falls back to remote URLs
    */
   async discoverPricingUrls(): Promise<DiscoveredUrl[]> {
     console.log('🔍 Starting URL discovery from sitemaps...\n');
 
-    for (const sitemapUrl of config.sitemapUrls) {
-      try {
-        console.log(`📄 Processing: ${sitemapUrl}`);
-        await this.processSitemap(sitemapUrl);
-      } catch (error) {
-        console.error(`❌ Failed to process ${sitemapUrl}:`, error);
+    // First, try local sitemap files
+    const localSitemaps = await this.findLocalSitemaps();
+
+    if (localSitemaps.length > 0) {
+      console.log(`📂 Found ${localSitemaps.length} local sitemap file(s)\n`);
+
+      for (const localPath of localSitemaps) {
+        try {
+          console.log(`📄 Processing local: ${localPath}`);
+          await this.processLocalSitemap(localPath);
+        } catch (error) {
+          console.error(`❌ Failed to process ${localPath}:`, error);
+        }
+      }
+    } else {
+      console.log('📂 No local sitemaps found, trying remote URLs...\n');
+
+      // Fall back to remote URLs
+      for (const sitemapUrl of config.sitemapUrls) {
+        try {
+          console.log(`📄 Processing remote: ${sitemapUrl}`);
+          await this.processRemoteSitemap(sitemapUrl);
+        } catch (error) {
+          console.error(`❌ Failed to process ${sitemapUrl}:`, error);
+        }
       }
     }
 
@@ -65,9 +87,58 @@ export class SitemapCrawler {
   }
 
   /**
-   * Process a single sitemap (handles both index and urlset)
+   * Find all local sitemap XML files in the sitemaps directory
    */
-  private async processSitemap(sitemapUrl: string): Promise<void> {
+  private async findLocalSitemaps(): Promise<string[]> {
+    const sitemapDir = config.localSitemapDir;
+    const sitemaps: string[] = [];
+
+    try {
+      const files = await fs.readdir(sitemapDir);
+
+      for (const file of files) {
+        if (file.endsWith('.xml')) {
+          sitemaps.push(path.join(sitemapDir, file));
+        }
+      }
+    } catch {
+      // Directory doesn't exist or is not readable
+    }
+
+    return sitemaps.sort();
+  }
+
+  /**
+   * Process a local sitemap file
+   */
+  private async processLocalSitemap(filePath: string): Promise<void> {
+    if (this.visitedSitemaps.has(filePath)) {
+      return;
+    }
+    this.visitedSitemaps.add(filePath);
+
+    try {
+      const xml = await fs.readFile(filePath, 'utf-8');
+      const parsed = this.parser.parse(xml);
+
+      // Check if it's a sitemap index
+      if (parsed.sitemapindex) {
+        await this.processSitemapIndex(parsed.sitemapindex, filePath);
+      }
+
+      // Check if it's a urlset
+      if (parsed.urlset) {
+        this.processUrlset(parsed.urlset, filePath);
+      }
+    } catch (error) {
+      console.error(`  ❌ Error processing ${filePath}:`, error);
+    }
+  }
+
+  /**
+   * Process a remote sitemap URL
+   */
+  private async processRemoteSitemap(sitemapUrl: string): Promise<void> {
     if (this.visitedSitemaps.has(sitemapUrl)) {
       return;
     }
@@ -100,10 +171,11 @@ export class SitemapCrawler {
 
   /**
    * Process a sitemap index file (contains references to other sitemaps)
+   * For local files, looks for referenced sitemaps locally first
    */
   private async processSitemapIndex(
     sitemapIndex: { sitemap: SitemapIndex | SitemapIndex[] },
-    parentUrl: string
+    parentSource: string
   ): Promise<void> {
     const sitemaps = Array.isArray(sitemapIndex.sitemap)
       ? sitemapIndex.sitemap
@@ -118,11 +190,37 @@ export class SitemapCrawler {
       await Promise.all(
         chunk.map(async (sitemap) => {
           const loc = typeof sitemap === 'string' ? sitemap : sitemap.loc;
-          if (loc) {
-            await this.processSitemap(loc);
+          if (!loc) return;
+
+          // If parent is local, try to find referenced sitemap locally
+          if (!parentSource.startsWith('http')) {
+            const localPath = this.resolveLocalSitemap(loc);
+            if (localPath) {
+              await this.processLocalSitemap(localPath);
+              return;
+            }
           }
+
+          // Fall back to remote
+          await this.processRemoteSitemap(loc);
         })
       );
+    }
+  }
+
+  /**
+   * Try to resolve a sitemap URL to a local file path
+   */
+  private resolveLocalSitemap(url: string): string | null {
+    try {
+      const urlObj = new URL(url);
+      const filename = path.basename(urlObj.pathname);
+      const localPath = path.join(config.localSitemapDir, filename);
+
+      // We'll check if it exists when we try to read it
+      return localPath;
+    } catch {
+      return null;
     }
   }
 
@@ -131,7 +229,7 @@ export class SitemapCrawler {
    */
   private processUrlset(
     urlset: { url: SitemapUrl | SitemapUrl[] },
-    sitemapUrl: string
+    source: string
   ): void {
     const urls = Array.isArray(urlset.url) ? urlset.url : [urlset.url];
 
@@ -158,7 +256,7 @@ export class SitemapCrawler {
     }
 
     if (pricingCount > 0) {
-      console.log(`  ✓ Found ${pricingCount} pricing URLs in ${sitemapUrl}`);
+      console.log(`  ✓ Found ${pricingCount} pricing URLs in ${path.basename(source)}`);
     }
   }
 

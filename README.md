@@ -45,10 +45,30 @@ npm install
 npx playwright install chromium --with-deps
 ```
 
+### Using Local Sitemaps (Recommended)
+
+If remote sitemap fetching returns 403 errors, download the sitemaps manually:
+
+```bash
+# Option 1: Download via browser
+# Visit https://www.viking.com/sitemap.xml and save to sitemaps/
+
+# Option 2: Download via curl with browser user-agent
+curl -A "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)" \
+  -o sitemaps/viking-sitemap.xml \
+  "https://www.viking.com/sitemap.xml"
+
+curl -A "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)" \
+  -o sitemaps/vikingcruises-sitemap.xml \
+  "https://www.vikingcruises.com/sitemap.xml"
+```
+
+Place XML files in the `sitemaps/` directory - the crawler will use them automatically.
+
 ### Running Tests
 
 ```bash
-# Step 1: Discover pricing URLs
+# Step 1: Discover pricing URLs (uses local sitemaps if present)
 npm run discover
 
 # Optional: Include link-based crawling (more thorough, slower)
@@ -75,10 +95,12 @@ npm run report
 
 ```
 e2e-viking/
+├── sitemaps/                  # Local sitemap XML files (optional)
+│   └── *.xml
 ├── src/
 │   ├── config.ts              # Configuration settings
 │   ├── discovery/
-│   │   ├── sitemap-crawler.ts # Sitemap XML parser
+│   │   ├── sitemap-crawler.ts # Sitemap XML parser (local + remote)
 │   │   ├── link-crawler.ts    # Link-following crawler
 │   │   ├── url-manifest.ts    # URL manifest management
 │   │   └── run-discovery.ts   # Discovery entry point
@@ -188,9 +210,15 @@ Avg Load Time: 2340ms
 
 ## Troubleshooting
 
-### No URLs discovered
-- Check if sitemaps are accessible: `curl https://www.viking.com/sitemap.xml`
-- Try including link crawling: `npm run discover -- --include-link-crawl`
+### No URLs discovered / 403 Errors
+Remote sitemaps may block automated requests. Use local sitemaps instead:
+
+```bash
+# Download sitemaps manually to the sitemaps/ directory
+curl -A "Mozilla/5.0" -o sitemaps/viking.xml "https://www.viking.com/sitemap.xml"
+```
+
+Or download via browser and save to `sitemaps/`.
 
 ### Tests timing out
 - Increase timeout in `playwright.config.ts`

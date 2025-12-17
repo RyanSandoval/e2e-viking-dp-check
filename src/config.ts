@@ -9,7 +9,10 @@ export interface VikingConfig {
   /** URL patterns to match for pricing pages */
   pricingPagePatterns: RegExp[];
 
-  /** Known sitemap locations */
+  /** Local directory containing sitemap XML files (checked first) */
+  localSitemapDir: string;
+
+  /** Remote sitemap URLs (fallback if no local files) */
   sitemapUrls: string[];
 
   /** Maximum concurrent requests during discovery */
@@ -70,7 +73,10 @@ export const config: VikingConfig = {
     /\/prices\.html$/i,
   ],
 
-  // Known sitemap locations
+  // Local sitemap directory (checked first - put downloaded XML files here)
+  localSitemapDir: 'sitemaps',
+
+  // Remote sitemap URLs (fallback if no local files found)
   sitemapUrls: [
     'https://www.viking.com/sitemap.xml',
     'https://www.vikingcruises.com/sitemap.xml',
