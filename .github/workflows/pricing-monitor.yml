@@ -1,0 +1,225 @@
+name: Viking Pricing Page Monitor
+
+on:
+  # Run daily at 6am PT (14:00 UTC)
+  schedule:
+    - cron: '0 14 * * *'
+
+  # Run on push to main branch
+  push:
+    branches:
+      - main
+      - master
+
+  # Allow manual trigger
+  workflow_dispatch:
+    inputs:
+      include_link_crawl:
+        description: 'Include link-based crawling (slower but more thorough)'
+        required: false
+        default: 'false'
+        type: boolean
+
+jobs:
+  discover:
+    name: Discover Pricing URLs
+    runs-on: ubuntu-latest
+    outputs:
+      url_count: ${{ steps.discover.outputs.url_count }}
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Install Playwright browsers
+        run: npx playwright install chromium --with-deps
+
+      - name: Run URL discovery
+        id: discover
+        run: |
+          if [ "${{ github.event.inputs.include_link_crawl }}" = "true" ]; then
+            npm run discover -- --include-link-crawl
+          else
+            npm run discover
+          fi
+
+          # Output URL count for summary
+          URL_COUNT=$(jq '.totalUrls' pricing-urls.json)
+          echo "url_count=$URL_COUNT" >> $GITHUB_OUTPUT
+
+      - name: Upload URL manifest
+        uses: actions/upload-artifact@v4
+        with:
+          name: pricing-urls
+          path: pricing-urls.json
+          retention-days: 30
+
+  test:
+    name: Test Pricing Pages
+    runs-on: ubuntu-latest
+    needs: discover
+    timeout-minutes: 20
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Install Playwright browsers
+        run: npx playwright install chromium --with-deps
+
+      - name: Download URL manifest
+        uses: actions/download-artifact@v4
+        with:
+          name: pricing-urls
+
+      - name: Run pricing page tests
+        run: npm test
+        continue-on-error: true
+
+      - name: Upload test results
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: test-results
+          path: |
+            results.json
+            results.csv
+            test-results/
+            playwright-report/
+            screenshots/
+          retention-days: 30
+
+      - name: Upload Playwright report
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: playwright-report
+          path: playwright-report/
+          retention-days: 30
+
+  notify:
+    name: Send Notifications
+    runs-on: ubuntu-latest
+    needs: [discover, test]
+    if: always()
+
+    steps:
+      - name: Download test results
+        uses: actions/download-artifact@v4
+        with:
+          name: test-results
+        continue-on-error: true
+
+      - name: Parse results and notify Slack
+        if: env.SLACK_WEBHOOK_URL != ''
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+        run: |
+          if [ ! -f results.json ]; then
+            echo "No results file found"
+            exit 0
+          fi
+
+          TOTAL=$(jq '.totalTested' results.json)
+          PASSED=$(jq '.passed' results.json)
+          FAILED=$(jq '.failed' results.json)
+          AVG_TIME=$(jq '.avgLoadTimeMs | floor' results.json)
+
+          if [ "$FAILED" = "0" ]; then
+            EMOJI="✅"
+            COLOR="#36a64f"
+          else
+            EMOJI="🚨"
+            COLOR="#dc3545"
+          fi
+
+          # Get first 5 failed URLs
+          FAILED_URLS=$(jq -r '.results | map(select(.passed == false)) | .[0:5] | .[] | "• \(.url): \(.errors | join(", "))"' results.json || echo "")
+
+          # Create Slack message
+          cat << EOF > slack-message.json
+          {
+            "attachments": [{
+              "color": "$COLOR",
+              "blocks": [
+                {
+                  "type": "header",
+                  "text": {
+                    "type": "plain_text",
+                    "text": "$EMOJI Viking Pricing Page Monitor",
+                    "emoji": true
+                  }
+                },
+                {
+                  "type": "section",
+                  "fields": [
+                    {"type": "mrkdwn", "text": "*Total Tested:*\n$TOTAL"},
+                    {"type": "mrkdwn", "text": "*Passed:*\n$PASSED"},
+                    {"type": "mrkdwn", "text": "*Failed:*\n$FAILED"},
+                    {"type": "mrkdwn", "text": "*Avg Load Time:*\n${AVG_TIME}ms"}
+                  ]
+                },
+                {
+                  "type": "context",
+                  "elements": [
+                    {
+                      "type": "mrkdwn",
+                      "text": "Run: <${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}|View Details>"
+                    }
+                  ]
+                }
+              ]
+            }]
+          }
+          EOF
+
+          curl -X POST -H 'Content-type: application/json' \
+            --data @slack-message.json \
+            "$SLACK_WEBHOOK_URL"
+
+      - name: Create summary
+        if: always()
+        run: |
+          echo "## Viking Pricing Page Monitor Results" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+
+          if [ -f results.json ]; then
+            TOTAL=$(jq '.totalTested' results.json)
+            PASSED=$(jq '.passed' results.json)
+            FAILED=$(jq '.failed' results.json)
+            AVG_TIME=$(jq '.avgLoadTimeMs | floor' results.json)
+
+            echo "| Metric | Value |" >> $GITHUB_STEP_SUMMARY
+            echo "|--------|-------|" >> $GITHUB_STEP_SUMMARY
+            echo "| Total Tested | $TOTAL |" >> $GITHUB_STEP_SUMMARY
+            echo "| ✅ Passed | $PASSED |" >> $GITHUB_STEP_SUMMARY
+            echo "| ❌ Failed | $FAILED |" >> $GITHUB_STEP_SUMMARY
+            echo "| ⏱️ Avg Load Time | ${AVG_TIME}ms |" >> $GITHUB_STEP_SUMMARY
+
+            if [ "$FAILED" != "0" ]; then
+              echo "" >> $GITHUB_STEP_SUMMARY
+              echo "### Failed Pages" >> $GITHUB_STEP_SUMMARY
+              echo "" >> $GITHUB_STEP_SUMMARY
+              jq -r '.results | map(select(.passed == false)) | .[] | "- [\(.url)](\(.url)): \(.errors | join(", "))"' results.json >> $GITHUB_STEP_SUMMARY
+            fi
+          else
+            echo "⚠️ No results available" >> $GITHUB_STEP_SUMMARY
+          fi

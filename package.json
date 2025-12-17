@@ -1,0 +1,38 @@
+{
+  "name": "e2e-viking",
+  "version": "1.0.0",
+  "description": "Automated E2E testing of Viking cruise pricing pages",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "discover": "tsx src/discovery/run-discovery.ts",
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
+    "test:debug": "playwright test --debug",
+    "report": "playwright show-report",
+    "lint": "eslint src/**/*.ts",
+    "clean": "rm -rf dist test-results screenshots"
+  },
+  "keywords": [
+    "playwright",
+    "e2e",
+    "testing",
+    "viking",
+    "cruise"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@playwright/test": "^1.40.0",
+    "@types/node": "^20.10.0",
+    "eslint": "^8.55.0",
+    "tsx": "^4.6.2",
+    "typescript": "^5.3.2"
+  },
+  "dependencies": {
+    "fast-xml-parser": "^4.3.2"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
