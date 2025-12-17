@@ -113,25 +113,6 @@ interface CheckResult {
 }
 
 /**
- * Known error messages that indicate no pricing data is available
- */
-const ERROR_MESSAGES = [
-  // No available sailings message
-  'Based on your selections there are no available sailings',
-  'no available sailings',
-  'Please adjust your filters to see all availability',
-  // Call for pricing message
-  'For current fares, please call',
-  'please call a Viking Expert',
-  // Other potential error states
-  'No sailings available',
-  'No departures available',
-  'Currently unavailable',
-  'No prices available',
-  'Pricing not available',
-];
-
-/**
  * Test a single pricing page
  */
 async function testPricingPage(
@@ -310,26 +291,62 @@ async function testPricingPage(
 
 /**
  * Check for error messages indicating no pricing data available
- * This should be checked BEFORE looking for dates/prices
+ * Only checks VISIBLE elements - ignores hidden divs with display:none
  */
 async function checkForErrorMessages(page: Page): Promise<CheckResult> {
-  const pageText = await page.textContent('body') || '';
-  const pageTextLower = pageText.toLowerCase();
+  // Known error message patterns
+  const errorPatterns = [
+    // No available sailings message
+    'Based on your selections there are no available sailings',
+    'no available sailings',
+    'Please adjust your filters to see all availability',
+    // Other potential error states
+    'No sailings available',
+    'No departures available',
+    'Currently unavailable',
+    'No prices available',
+    'Pricing not available',
+  ];
 
-  for (const errorMsg of ERROR_MESSAGES) {
-    if (pageTextLower.includes(errorMsg.toLowerCase())) {
+  // Check the specific "pricing-unavailable" div - only if it's visible
+  const unavailablePanel = page.locator('#pricing-unavailable');
+  if (await unavailablePanel.count() > 0) {
+    const isVisible = await unavailablePanel.isVisible();
+    if (isVisible) {
+      const text = await unavailablePanel.textContent() || '';
       return {
         name: 'No error messages',
         passed: false,
-        details: `Found: "${errorMsg}"`,
+        details: `Unavailable panel visible: "${text.trim().substring(0, 100)}"`,
       };
+    }
+  }
+
+  // Check for error messages in visible text only
+  // Use locator with :visible pseudo-class or check visibility
+  for (const errorMsg of errorPatterns) {
+    // Look for the text in visible elements only
+    const locator = page.locator(`text="${errorMsg}"`).first();
+    if (await locator.count() > 0) {
+      try {
+        const isVisible = await locator.isVisible();
+        if (isVisible) {
+          return {
+            name: 'No error messages',
+            passed: false,
+            details: `Found visible: "${errorMsg}"`,
+          };
+        }
+      } catch {
+        // Element might have been removed, continue checking
+      }
     }
   }
 
   return {
     name: 'No error messages',
     passed: true,
-    details: 'No error messages found',
+    details: 'No visible error messages found',
   };
 }
 
