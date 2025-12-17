@@ -4,11 +4,12 @@
  * Tests each pricing URL from the manifest for:
  * 1. Page returns 200 (not 404/500)
  * 2. Page loads within 10 seconds
- * 3. At least one departure date is visible
- * 4. Price values are present (not $0, not empty)
- * 5. Stateroom/cabin categories display
- * 6. "Request Quote" or booking CTA exists
- * 7. No JS errors from viking*.com domains
+ * 3. No "no availability" error messages displayed
+ * 4. At least one departure date is visible
+ * 5. Price values are present (not $0, not empty)
+ * 6. Stateroom/cabin categories display
+ * 7. "Request Quote" or booking CTA exists
+ * 8. No JS errors from viking*.com domains
  */
 
 import { test, expect, Page } from '@playwright/test';
@@ -107,6 +108,25 @@ interface CheckResult {
 }
 
 /**
+ * Known error messages that indicate no pricing data is available
+ */
+const ERROR_MESSAGES = [
+  // No available sailings message
+  'Based on your selections there are no available sailings',
+  'no available sailings',
+  'Please adjust your filters to see all availability',
+  // Call for pricing message
+  'For current fares, please call',
+  'please call a Viking Expert',
+  // Other potential error states
+  'No sailings available',
+  'No departures available',
+  'Currently unavailable',
+  'No prices available',
+  'Pricing not available',
+];
+
+/**
  * Test a single pricing page
  */
 async function testPricingPage(
@@ -175,35 +195,42 @@ async function testPricingPage(
       // Wait for dynamic content
       await page.waitForLoadState('networkidle').catch(() => {});
 
-      // Check 3: Departure dates visible
+      // Check 3: No error messages displayed (check FIRST before dates/prices)
+      const errorMessageCheck = await checkForErrorMessages(page);
+      checks.push(errorMessageCheck);
+      if (!errorMessageCheck.passed) {
+        errors.push(errorMessageCheck.details || 'Error message displayed on page');
+      }
+
+      // Check 4: Departure dates visible
       const departureDateCheck = await checkDepartureDates(page);
       checks.push(departureDateCheck);
       if (!departureDateCheck.passed) {
         errors.push('No departure dates found');
       }
 
-      // Check 4: Price values present
+      // Check 5: Price values present
       const priceCheck = await checkPriceValues(page);
       checks.push(priceCheck);
       if (!priceCheck.passed) {
         errors.push('No valid prices found');
       }
 
-      // Check 5: Stateroom/cabin categories
+      // Check 6: Stateroom/cabin categories
       const stateroomCheck = await checkStateroomCategories(page);
       checks.push(stateroomCheck);
       if (!stateroomCheck.passed) {
         warnings.push('No stateroom categories found');
       }
 
-      // Check 6: CTA button exists
+      // Check 7: CTA button exists
       const ctaCheck = await checkCTAButton(page);
       checks.push(ctaCheck);
       if (!ctaCheck.passed) {
         warnings.push('No booking CTA found');
       }
 
-      // Check 7: No JS errors from viking domains
+      // Check 8: No JS errors from viking domains
       checks.push({
         name: 'No Viking JS errors',
         passed: pageJsErrors.length === 0,
@@ -235,8 +262,14 @@ async function testPricingPage(
       await page.screenshot({ path: screenshotPath, fullPage: true });
     }
 
+    // Critical checks: HTTP status, no error messages, dates visible, prices present
     const criticalChecksFailed = checks
-      .filter((c) => ['HTTP Status 200', 'Departure dates visible', 'Valid prices present'].includes(c.name))
+      .filter((c) => [
+        'HTTP Status 200',
+        'No error messages',
+        'Departure dates visible',
+        'Valid prices present'
+      ].includes(c.name))
       .some((c) => !c.passed);
 
     return {
@@ -271,6 +304,31 @@ async function testPricingPage(
 }
 
 /**
+ * Check for error messages indicating no pricing data available
+ * This should be checked BEFORE looking for dates/prices
+ */
+async function checkForErrorMessages(page: Page): Promise<CheckResult> {
+  const pageText = await page.textContent('body') || '';
+  const pageTextLower = pageText.toLowerCase();
+
+  for (const errorMsg of ERROR_MESSAGES) {
+    if (pageTextLower.includes(errorMsg.toLowerCase())) {
+      return {
+        name: 'No error messages',
+        passed: false,
+        details: `Found: "${errorMsg}"`,
+      };
+    }
+  }
+
+  return {
+    name: 'No error messages',
+    passed: true,
+    details: 'No error messages found',
+  };
+}
+
+/**
  * Check for departure dates on the page
  */
 async function checkDepartureDates(page: Page): Promise<CheckResult> {
@@ -285,11 +343,11 @@ async function checkDepartureDates(page: Page): Promise<CheckResult> {
     '[datetime]',
   ];
 
-  // Also check for date text patterns
+  // Also check for date text patterns (Jun 27, Aug 1, etc. as seen in screenshots)
   const datePatterns = [
-    /\b(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\s+\d{1,2}/i,
-    /\b\d{1,2}\s+(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)/i,
-    /\b(January|February|March|April|May|June|July|August|September|October|November|December)\s+\d{1,2}/i,
+    /\b(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\s+\d{1,2}\b/i,
+    /\b\d{1,2}\s+(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\b/i,
+    /\b(January|February|March|April|May|June|July|August|September|October|November|December)\s+\d{1,2}\b/i,
     /\d{1,2}\/\d{1,2}\/\d{2,4}/,
     /\d{4}-\d{2}-\d{2}/,
   ];
@@ -309,11 +367,12 @@ async function checkDepartureDates(page: Page): Promise<CheckResult> {
   // Check page text for date patterns
   const pageText = await page.textContent('body') || '';
   for (const pattern of datePatterns) {
-    if (pattern.test(pageText)) {
+    const match = pageText.match(pattern);
+    if (match) {
       return {
         name: 'Departure dates visible',
         passed: true,
-        details: 'Found date in page text',
+        details: `Found date: "${match[0]}"`,
       };
     }
   }
@@ -327,11 +386,14 @@ async function checkDepartureDates(page: Page): Promise<CheckResult> {
 
 /**
  * Check for valid price values (not $0, not empty)
+ * Looks for prices like $5,499, $6,499, $52,995 as seen in screenshots
  */
 async function checkPriceValues(page: Page): Promise<CheckResult> {
   const priceSelectors = [
     '[data-testid*="price"]',
+    '[data-testid*="fare"]',
     '[class*="price"]',
+    '[class*="fare"]',
     '.price',
     '.cost',
     '.fare',
@@ -366,7 +428,7 @@ async function checkPriceValues(page: Page): Promise<CheckResult> {
     }
   }
 
-  // Check full page text
+  // Check full page text for prices
   const pageText = await page.textContent('body') || '';
   const prices = pageText.match(pricePattern);
 
@@ -392,6 +454,7 @@ async function checkPriceValues(page: Page): Promise<CheckResult> {
 
 /**
  * Check for stateroom/cabin category displays
+ * Looks for: SUITE, VERANDA, FRENCH BALCONY, STANDARD, NORDIC BALCONY as seen in screenshots
  */
 async function checkStateroomCategories(page: Page): Promise<CheckResult> {
   const categorySelectors = [
@@ -399,18 +462,22 @@ async function checkStateroomCategories(page: Page): Promise<CheckResult> {
     '[class*="cabin"]',
     '[class*="category"]',
     '[class*="accommodation"]',
+    '[class*="availability"]',
     '[data-testid*="stateroom"]',
     '[data-testid*="cabin"]',
   ];
 
+  // Keywords from the screenshots
   const categoryKeywords = [
-    'veranda',
-    'balcony',
     'suite',
+    'veranda',
+    'french balcony',
+    'nordic balcony',
+    'balcony',
+    'standard',
     'penthouse',
     'explorer',
     'deluxe',
-    'standard',
     'category',
     'stateroom',
     'cabin',
@@ -449,19 +516,29 @@ async function checkStateroomCategories(page: Page): Promise<CheckResult> {
 
 /**
  * Check for "Request Quote" or booking CTA button
+ * Looks for: PRICE & BUILD, MORE INFO, Request a Quote as seen in screenshots
  */
 async function checkCTAButton(page: Page): Promise<CheckResult> {
   const ctaSelectors = [
+    'button:has-text("Price")',
+    'a:has-text("Price")',
+    'button:has-text("Build")',
+    'a:has-text("Build")',
     'button:has-text("Request Quote")',
     'a:has-text("Request Quote")',
+    'button:has-text("Request a Quote")',
+    'a:has-text("Request a Quote")',
     'button:has-text("Book")',
     'a:has-text("Book")',
     'button:has-text("Reserve")',
     'a:has-text("Reserve")',
+    'button:has-text("More Info")',
+    'a:has-text("More Info")',
     '[data-testid*="cta"]',
     '[class*="cta"]',
     '[class*="book-now"]',
     '[class*="request-quote"]',
+    '[class*="price-build"]',
   ];
 
   for (const selector of ctaSelectors) {
