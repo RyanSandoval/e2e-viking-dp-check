@@ -79,16 +79,23 @@ test.describe('Viking Pricing Page Monitor', () => {
       }
     }
 
-    // Write results to file for the reporter
-    await writeResults(results);
+    // Write results to file and get summary
+    const summaryText = await writeResults(results, testInfo);
+
+    // Attach summary to test report so it's visible in HTML report
+    await testInfo.attach('Test Summary', {
+      body: summaryText,
+      contentType: 'text/plain',
+    });
 
     // Final assertion - fail if any pages failed
     const failedPages = results.filter((r) => !r.passed);
+    const passedPages = results.filter((r) => r.passed);
+
     if (failedPages.length > 0) {
-      const summary = failedPages
-        .map((r) => `${r.url}: ${r.errors.join(', ')}`)
-        .join('\n');
-      expect(failedPages.length, `${failedPages.length} pages failed:\n${summary}`).toBe(0);
+      const errorSummary = `${failedPages.length} pages failed, ${passedPages.length} pages passed:\n` +
+        failedPages.map((r) => `${r.url}: ${r.errors.join(', ')}`).join('\n');
+      expect(failedPages.length, errorSummary).toBe(0);
     }
   });
 });
@@ -588,8 +595,9 @@ async function checkCTAButton(page: Page): Promise<CheckResult> {
 
 /**
  * Write test results to file and print summary
+ * Returns summary text for attachment to test report
  */
-async function writeResults(results: PricingPageResult[]): Promise<void> {
+async function writeResults(results: PricingPageResult[], testInfo?: any): Promise<string> {
   const passedResults = results.filter((r) => r.passed);
   const failedResults = results.filter((r) => !r.passed);
 
@@ -623,40 +631,47 @@ async function writeResults(results: PricingPageResult[]): Promise<void> {
 
   await fs.writeFile(config.output.resultsCsv, csvHeader + csvRows, 'utf-8');
 
-  // Print detailed summary to console
-  console.log('\n');
-  console.log('═══════════════════════════════════════════════════════════════');
-  console.log('              Viking Pricing Page Monitor Results');
-  console.log('═══════════════════════════════════════════════════════════════');
-  console.log(`  Total Tested:  ${results.length}`);
-  console.log(`  ✅ Passed:     ${passedResults.length}`);
-  console.log(`  ❌ Failed:     ${failedResults.length}`);
-  console.log(`  ⏱️  Avg Load:   ${Math.round(summary.avgLoadTimeMs)}ms`);
-  console.log('═══════════════════════════════════════════════════════════════');
+  // Build summary text
+  const lines: string[] = [];
+  lines.push('');
+  lines.push('═══════════════════════════════════════════════════════════════');
+  lines.push('              Viking Pricing Page Monitor Results');
+  lines.push('═══════════════════════════════════════════════════════════════');
+  lines.push(`  Total Tested:  ${results.length}`);
+  lines.push(`  PASSED:        ${passedResults.length}`);
+  lines.push(`  FAILED:        ${failedResults.length}`);
+  lines.push(`  Avg Load:      ${Math.round(summary.avgLoadTimeMs)}ms`);
+  lines.push('═══════════════════════════════════════════════════════════════');
 
-  // Show passed URLs (truncated if many)
+  // Show passed URLs
   if (passedResults.length > 0) {
-    console.log('\n✅ PASSED URLs:');
-    const passedToShow = passedResults.slice(0, 20);
-    for (const r of passedToShow) {
-      console.log(`   ${r.url}`);
-    }
-    if (passedResults.length > 20) {
-      console.log(`   ... and ${passedResults.length - 20} more passed URLs`);
+    lines.push('');
+    lines.push('PASSED URLs:');
+    for (const r of passedResults) {
+      lines.push(`   ${r.url}`);
     }
   }
 
-  // Show failed URLs (all of them since they're important)
+  // Show failed URLs
   if (failedResults.length > 0) {
-    console.log('\n❌ FAILED URLs:');
+    lines.push('');
+    lines.push('FAILED URLs:');
     for (const r of failedResults) {
-      console.log(`   ${r.url}`);
-      console.log(`      └─ ${r.errors.join(', ')}`);
+      lines.push(`   ${r.url}`);
+      lines.push(`      -> ${r.errors.join(', ')}`);
     }
   }
 
-  console.log('\n───────────────────────────────────────────────────────────────');
-  console.log(`📊 Full results: ${config.output.resultsJson}`);
-  console.log(`📄 CSV export:   ${config.output.resultsCsv}`);
-  console.log('───────────────────────────────────────────────────────────────\n');
+  lines.push('');
+  lines.push('───────────────────────────────────────────────────────────────');
+  lines.push(`Full results: ${config.output.resultsJson}`);
+  lines.push(`CSV export:   ${config.output.resultsCsv}`);
+  lines.push('───────────────────────────────────────────────────────────────');
+
+  const summaryText = lines.join('\n');
+
+  // Print to console
+  console.log(summaryText);
+
+  return summaryText;
 }
