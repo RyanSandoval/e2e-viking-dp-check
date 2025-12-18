@@ -587,14 +587,17 @@ async function checkCTAButton(page: Page): Promise<CheckResult> {
 }
 
 /**
- * Write test results to file
+ * Write test results to file and print summary
  */
 async function writeResults(results: PricingPageResult[]): Promise<void> {
+  const passedResults = results.filter((r) => r.passed);
+  const failedResults = results.filter((r) => !r.passed);
+
   const summary = {
     runAt: new Date().toISOString(),
     totalTested: results.length,
-    passed: results.filter((r) => r.passed).length,
-    failed: results.filter((r) => !r.passed).length,
+    passed: passedResults.length,
+    failed: failedResults.length,
     warnings: results.filter((r) => r.warnings.length > 0).length,
     avgLoadTimeMs:
       results.reduce((sum, r) => sum + r.loadTimeMs, 0) / results.length || 0,
@@ -620,5 +623,40 @@ async function writeResults(results: PricingPageResult[]): Promise<void> {
 
   await fs.writeFile(config.output.resultsCsv, csvHeader + csvRows, 'utf-8');
 
-  console.log(`\n📊 Results written to ${config.output.resultsJson} and ${config.output.resultsCsv}`);
+  // Print detailed summary to console
+  console.log('\n');
+  console.log('═══════════════════════════════════════════════════════════════');
+  console.log('              Viking Pricing Page Monitor Results');
+  console.log('═══════════════════════════════════════════════════════════════');
+  console.log(`  Total Tested:  ${results.length}`);
+  console.log(`  ✅ Passed:     ${passedResults.length}`);
+  console.log(`  ❌ Failed:     ${failedResults.length}`);
+  console.log(`  ⏱️  Avg Load:   ${Math.round(summary.avgLoadTimeMs)}ms`);
+  console.log('═══════════════════════════════════════════════════════════════');
+
+  // Show passed URLs (truncated if many)
+  if (passedResults.length > 0) {
+    console.log('\n✅ PASSED URLs:');
+    const passedToShow = passedResults.slice(0, 20);
+    for (const r of passedToShow) {
+      console.log(`   ${r.url}`);
+    }
+    if (passedResults.length > 20) {
+      console.log(`   ... and ${passedResults.length - 20} more passed URLs`);
+    }
+  }
+
+  // Show failed URLs (all of them since they're important)
+  if (failedResults.length > 0) {
+    console.log('\n❌ FAILED URLs:');
+    for (const r of failedResults) {
+      console.log(`   ${r.url}`);
+      console.log(`      └─ ${r.errors.join(', ')}`);
+    }
+  }
+
+  console.log('\n───────────────────────────────────────────────────────────────');
+  console.log(`📊 Full results: ${config.output.resultsJson}`);
+  console.log(`📄 CSV export:   ${config.output.resultsCsv}`);
+  console.log('───────────────────────────────────────────────────────────────\n');
 }
