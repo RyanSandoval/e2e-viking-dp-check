@@ -643,12 +643,24 @@ async function writeResults(results: PricingPageResult[], testInfo?: any): Promi
   lines.push(`  Avg Load:      ${Math.round(summary.avgLoadTimeMs)}ms`);
   lines.push('═══════════════════════════════════════════════════════════════');
 
-  // Show passed URLs
+  // Show passed URLs summary
   if (passedResults.length > 0) {
     lines.push('');
-    lines.push('PASSED URLs:');
-    for (const r of passedResults) {
-      lines.push(`   ${r.url}`);
+    lines.push(`PASSED URLs: ${passedResults.length} URLs passed all checks`);
+
+    // Show sample of passed URLs (first 10) if there are many
+    const maxToShow = 10;
+    if (passedResults.length <= maxToShow) {
+      // Show all if there are few
+      for (const r of passedResults) {
+        lines.push(`   ✓ ${r.url}`);
+      }
+    } else {
+      // Show first few with count of remaining
+      for (let i = 0; i < maxToShow; i++) {
+        lines.push(`   ✓ ${passedResults[i].url}`);
+      }
+      lines.push(`   ... and ${passedResults.length - maxToShow} more passed URLs`);
     }
   }
 
