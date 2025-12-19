@@ -652,13 +652,47 @@ async function writeResults(results: PricingPageResult[], testInfo?: any): Promi
     }
   }
 
-  // Show failed URLs
+  // Show failed URLs grouped by error type
   if (failedResults.length > 0) {
     lines.push('');
-    lines.push('FAILED URLs:');
+    lines.push('FAILED URLs (grouped by error type):');
+
+    // Group by error type
+    const errorGroups: Map<string, PricingPageResult[]> = new Map();
     for (const r of failedResults) {
-      lines.push(`   ${r.url}`);
-      lines.push(`      -> ${r.errors.join(', ')}`);
+      // Categorize the error
+      let errorType = 'Other';
+      const errorStr = r.errors.join(', ');
+
+      if (errorStr.includes('HTTP 404')) {
+        errorType = 'HTTP 404 (Page Not Found)';
+      } else if (errorStr.includes('HTTP 5')) {
+        errorType = 'HTTP 5xx (Server Error)';
+      } else if (errorStr.includes('Unavailable panel visible')) {
+        errorType = 'Pricing Unavailable (Call for fares)';
+      } else if (errorStr.includes('No departure dates')) {
+        errorType = 'No Departure Dates';
+      } else if (errorStr.includes('No valid prices')) {
+        errorType = 'No Valid Prices';
+      } else if (errorStr.includes('timeout') || errorStr.includes('Timeout')) {
+        errorType = 'Page Load Timeout';
+      }
+
+      if (!errorGroups.has(errorType)) {
+        errorGroups.set(errorType, []);
+      }
+      errorGroups.get(errorType)!.push(r);
+    }
+
+    // Sort error types by count (most common first)
+    const sortedGroups = Array.from(errorGroups.entries()).sort((a, b) => b[1].length - a[1].length);
+
+    for (const [errorType, urls] of sortedGroups) {
+      lines.push('');
+      lines.push(`   [${errorType}] (${urls.length} URLs):`);
+      for (const r of urls) {
+        lines.push(`      - ${r.url}`);
+      }
     }
   }
 
