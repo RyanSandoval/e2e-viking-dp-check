@@ -1,8 +1,12 @@
 {
   "name": "e2e-viking",
   "version": "1.0.0",
-  "description": "Automated E2E testing of Viking cruise pricing pages",
+  "description": "Automated Playwright-based monitor for Viking cruise pricing pages. Validates HTTP status, departure dates, prices, stateroom categories, and booking CTAs across 400+ URLs daily.",
   "main": "dist/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/RyanSandoval/e2e-viking.git"
+  },
   "scripts": {
     "build": "tsc",
     "discover": "tsx src/discovery/run-discovery.ts",
@@ -17,8 +21,13 @@
     "playwright",
     "e2e",
     "testing",
+    "monitoring",
     "viking",
-    "cruise"
+    "cruise",
+    "pricing",
+    "sitemap",
+    "automation",
+    "qa"
   ],
   "author": "",
   "license": "MIT",
