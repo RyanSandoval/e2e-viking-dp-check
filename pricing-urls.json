@@ -1,0 +1,2730 @@
+{
+  "version": "1.0.0",
+  "generatedAt": "2025-12-19T18:04:42.216Z",
+  "totalUrls": 388,
+  "byDomain": {
+    "www.vikingcruises.com": 149,
+    "www.vikingrivercruises.com": 239
+  },
+  "bySource": {
+    "sitemap": 388
+  },
+  "urls": [
+    {
+      "url": "https://www.vikingcruises.com/expeditions/cruise-destinations/antarctica/antarctic-explorer/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingcruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.196Z"
+    },
+    {
+      "url": "https://www.vikingcruises.com/expeditions/cruise-destinations/antarctica/antarctica-and-south-georgia-island/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingcruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.196Z"
+    },
+    {
+      "url": "https://www.vikingcruises.com/expeditions/cruise-destinations/antarctica/into-the-antarctic-circle/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingcruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.196Z"
+    },
+    {
+      "url": "https://www.vikingcruises.com/expeditions/cruise-destinations/caribbean-americas/panama-canal-and-the-americas/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingcruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.196Z"
+    },
+    {
+      "url": "https://www.vikingcruises.com/expeditions/cruise-destinations/grand-journeys/americas-and-antarctic-explorer/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingcruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.196Z"
+    },
+    {
+      "url": "https://www.vikingcruises.com/expeditions/cruise-destinations/grand-journeys/antarctic-explorer-and-the-americas/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingcruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.196Z"
+    },
+    {
+      "url": "https://www.vikingcruises.com/expeditions/cruise-destinations/grand-journeys/arctic-to-antarctic-explorer/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingcruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.196Z"
+    },
+    {
+      "url": "https://www.vikingcruises.com/expeditions/cruise-destinations/grand-journeys/argentina-and-the-chilean-fjords/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingcruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.196Z"
+    },
+    {
+      "url": "https://www.vikingcruises.com/expeditions/cruise-destinations/grand-journeys/chilean-fjords-and-scenic-shores/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingcruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.196Z"
+    },
+    {
+      "url": "https://www.vikingcruises.com/expeditions/cruise-destinations/grand-journeys/from-the-arctic-to-antarctica/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingcruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.196Z"
+    },
+    {
+      "url": "https://www.vikingcruises.com/expeditions/cruise-destinations/grand-journeys/longitudinal-world-cruise-ii/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingcruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.196Z"
+    },
+    {
+      "url": "https://www.vikingcruises.com/expeditions/cruise-destinations/grand-journeys/longitudinal-world-cruise-iii/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingcruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.196Z"
+    },
+    {
+      "url": "https://www.vikingcruises.com/expeditions/cruise-destinations/grand-journeys/longitudinal-world-cruise-iv/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingcruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.196Z"
+    },
+    {
+      "url": "https://www.vikingcruises.com/expeditions/cruise-destinations/grand-journeys/longitudinal-world-cruise-vi/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingcruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.196Z"
+    },
+    {
+      "url": "https://www.vikingcruises.com/expeditions/cruise-destinations/grand-journeys/longitudinal-world-cruise-vii/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingcruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.196Z"
+    },
+    {
+      "url": "https://www.vikingcruises.com/expeditions/cruise-destinations/grand-journeys/panama-and-scenic-south-america/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingcruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.196Z"
+    },
+    {
+      "url": "https://www.vikingcruises.com/expeditions/cruise-destinations/grand-journeys/the-americas-chile-and-antarctica/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingcruises.com",
+      "lastModified": "2025-08-21",
+      "discoveredAt": "2025-12-19T18:04:42.184Z"
+    },
+    {
+      "url": "https://www.vikingcruises.com/expeditions/cruise-destinations/great-lakes-canada/canada-and-greenland-explorer/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingcruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.196Z"
+    },
+    {
+      "url": "https://www.vikingcruises.com/expeditions/cruise-destinations/great-lakes-canada/canada-and-the-northwest-passage/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingcruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.196Z"
+    },
+    {
+      "url": "https://www.vikingcruises.com/expeditions/cruise-destinations/great-lakes-canada/canada-east-coast-explorer/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingcruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.196Z"
+    },
+    {
+      "url": "https://www.vikingcruises.com/expeditions/cruise-destinations/great-lakes-canada/canadian-discovery/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingcruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.196Z"
+    },
+    {
+      "url": "https://www.vikingcruises.com/expeditions/cruise-destinations/great-lakes-canada/great-lakes-collection/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingcruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.196Z"
+    },
+    {
+      "url": "https://www.vikingcruises.com/expeditions/cruise-destinations/great-lakes-canada/great-lakes-explorer/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingcruises.com",
+      "lastModified": "2025-08-21",
+      "discoveredAt": "2025-12-19T18:04:42.184Z"
+    },
+    {
+      "url": "https://www.vikingcruises.com/expeditions/cruise-destinations/great-lakes-canada/great-lakes-treasures/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingcruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.196Z"
+    },
+    {
+      "url": "https://www.vikingcruises.com/expeditions/cruise-destinations/great-lakes-canada/into-the-northwest-passage/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingcruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.196Z"
+    },
+    {
+      "url": "https://www.vikingcruises.com/expeditions/cruise-destinations/great-lakes-canada/niagara-and-great-lakes-treasures/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingcruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.196Z"
+    },
+    {
+      "url": "https://www.vikingcruises.com/expeditions/cruise-destinations/great-lakes-canada/niagara-and-the-great-lakes/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingcruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.196Z"
+    },
+    {
+      "url": "https://www.vikingcruises.com/expeditions/cruise-destinations/great-lakes-canada/undiscovered-great-lakes/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingcruises.com",
+      "lastModified": "2025-08-21",
+      "discoveredAt": "2025-12-19T18:04:42.184Z"
+    },
+    {
+      "url": "https://www.vikingcruises.com/oceans/cruise-destinations/asia-australia/australia-new-zealand-and-indonesia/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingcruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.196Z"
+    },
+    {
+      "url": "https://www.vikingcruises.com/oceans/cruise-destinations/asia-australia/australia-new-zealand/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingcruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.196Z"
+    },
+    {
+      "url": "https://www.vikingcruises.com/oceans/cruise-destinations/asia-australia/bangkok-bali-beyond/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingcruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.196Z"
+    },
+    {
+      "url": "https://www.vikingcruises.com/oceans/cruise-destinations/asia-australia/far-eastern-horizons/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingcruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.196Z"
+    },
+    {
+      "url": "https://www.vikingcruises.com/oceans/cruise-destinations/asia-australia/grand-australia-circumnavigation/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingcruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.196Z"
+    },
+    {
+      "url": "https://www.vikingcruises.com/oceans/cruise-destinations/asia-australia/komodo-australian-coast/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingcruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.196Z"
+    },
+    {
+      "url": "https://www.vikingcruises.com/oceans/cruise-destinations/asia-australia/southeast-asia-hong-kong/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingcruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.196Z"
+    },
+    {
+      "url": "https://www.vikingcruises.com/oceans/cruise-destinations/asia/2025-best-of-china/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingcruises.com",
+      "lastModified": "2025-08-21",
+      "discoveredAt": "2025-12-19T18:04:42.184Z"
+    },
+    {
+      "url": "https://www.vikingcruises.com/oceans/cruise-destinations/asia/2025-wonders-of-china/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingcruises.com",
+      "lastModified": "2025-08-21",
+      "discoveredAt": "2025-12-19T18:04:42.184Z"
+    },
+    {
+      "url": "https://www.vikingcruises.com/oceans/cruise-destinations/asia/classic-china-discovery/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingcruises.com",
+      "lastModified": "2025-08-21",
+      "discoveredAt": "2025-12-19T18:04:42.184Z"
+    },
+    {
+      "url": "https://www.vikingcruises.com/oceans/cruise-destinations/asia/coastal-jewels-of-china/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingcruises.com",
+      "lastModified": "2025-08-21",
+      "discoveredAt": "2025-12-19T18:04:42.184Z"
+    },
+    {
+      "url": "https://www.vikingcruises.com/oceans/cruise-destinations/asia/gems-of-china-and-japan/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingcruises.com",
+      "lastModified": "2025-08-21",
+      "discoveredAt": "2025-12-19T18:04:42.184Z"
+    },
+    {
+      "url": "https://www.vikingcruises.com/oceans/cruise-destinations/asia/jewels-of-japan-and-china/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingcruises.com",
+      "lastModified": "2025-08-21",
+      "discoveredAt": "2025-12-19T18:04:42.184Z"
+    },
+    {
+      "url": "https://www.vikingcruises.com/oceans/cruise-destinations/asia/pearls-of-japan-and-china/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingcruises.com",
+      "lastModified": "2025-08-21",
+      "discoveredAt": "2025-12-19T18:04:42.184Z"
+    },
+    {
+      "url": "https://www.vikingcruises.com/oceans/cruise-destinations/baltic/baltic-discovery/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingcruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.196Z"
+    },
+    {
+      "url": "https://www.vikingcruises.com/oceans/cruise-destinations/baltic/baltic-jewels-midnight-sun/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingcruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.196Z"
+    },
+    {
+      "url": "https://www.vikingcruises.com/oceans/cruise-destinations/baltic/british-isles-and-viking-shores/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingcruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.196Z"
+    },
+    {
+      "url": "https://www.vikingcruises.com/oceans/cruise-destinations/baltic/british-isles-explorer/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingcruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.196Z"
+    },
+    {
+      "url": "https://www.vikingcruises.com/oceans/cruise-destinations/baltic/british-isles-iceland-explorer/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingcruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.196Z"
+    },
+    {
+      "url": "https://www.vikingcruises.com/oceans/cruise-destinations/baltic/iceland-norway-arctic-explorer/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingcruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.196Z"
+    },
+    {
+      "url": "https://www.vikingcruises.com/oceans/cruise-destinations/baltic/icelands-majestic-landscapes/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingcruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.196Z"
+    },
+    {
+      "url": "https://www.vikingcruises.com/oceans/cruise-destinations/baltic/icelands-natural-beauty/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingcruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.196Z"
+    },
+    {
+      "url": "https://www.vikingcruises.com/oceans/cruise-destinations/baltic/icons-of-the-viking-age/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingcruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.196Z"
+    },
+    {
+      "url": "https://www.vikingcruises.com/oceans/cruise-destinations/baltic/in-search-of-northern-lights/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingcruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.196Z"
+    },
+    {
+      "url": "https://www.vikingcruises.com/oceans/cruise-destinations/baltic/in-search-of-the-northern-lights/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingcruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.196Z"
+    },
+    {
+      "url": "https://www.vikingcruises.com/oceans/cruise-destinations/baltic/into-the-midnight-sun/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingcruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.196Z"
+    },
+    {
+      "url": "https://www.vikingcruises.com/oceans/cruise-destinations/baltic/nordic-wonders/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingcruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.196Z"
+    },
+    {
+      "url": "https://www.vikingcruises.com/oceans/cruise-destinations/baltic/scandinavia-and-baltic-capitals/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingcruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.196Z"
+    },
+    {
+      "url": "https://www.vikingcruises.com/oceans/cruise-destinations/baltic/scandinavia-british-isles/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingcruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.196Z"
+    },
+    {
+      "url": "https://www.vikingcruises.com/oceans/cruise-destinations/baltic/scandinavian-discovery/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingcruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.196Z"
+    },
+    {
+      "url": "https://www.vikingcruises.com/oceans/cruise-destinations/baltic/scenic-scandinavia-and-baltic-jewels/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingcruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.196Z"
+    },
+    {
+      "url": "https://www.vikingcruises.com/oceans/cruise-destinations/baltic/viking-homelands-and-majestic-iceland/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingcruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.196Z"
+    },
+    {
+      "url": "https://www.vikingcruises.com/oceans/cruise-destinations/baltic/viking-homelands/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingcruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.196Z"
+    },
+    {
+      "url": "https://www.vikingcruises.com/oceans/cruise-destinations/baltic/viking-shores-and-fjords/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingcruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.196Z"
+    },
+    {
+      "url": "https://www.vikingcruises.com/oceans/cruise-destinations/caribbean-americas/alaska-inside-passage/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingcruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.196Z"
+    },
+    {
+      "url": "https://www.vikingcruises.com/oceans/cruise-destinations/caribbean-americas/atlantic-crossing/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingcruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.196Z"
+    },
+    {
+      "url": "https://www.vikingcruises.com/oceans/cruise-destinations/caribbean-americas/canada-new-england-scenic-shores/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingcruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.196Z"
+    },
+    {
+      "url": "https://www.vikingcruises.com/oceans/cruise-destinations/caribbean-americas/classic-panama-canal-passage/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingcruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.196Z"
+    },
+    {
+      "url": "https://www.vikingcruises.com/oceans/cruise-destinations/caribbean-americas/eastern-seaboard-explorer/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingcruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.196Z"
+    },
+    {
+      "url": "https://www.vikingcruises.com/oceans/cruise-destinations/caribbean-americas/from-the-caribbean-to-the-amazon/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingcruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.196Z"
+    },
+    {
+      "url": "https://www.vikingcruises.com/oceans/cruise-destinations/caribbean-americas/north-pacific-passage/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingcruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.196Z"
+    },
+    {
+      "url": "https://www.vikingcruises.com/oceans/cruise-destinations/caribbean-americas/panama-canal-and-the-pacific-coast/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingcruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.196Z"
+    },
+    {
+      "url": "https://www.vikingcruises.com/oceans/cruise-destinations/caribbean-americas/panama-central-america/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingcruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.196Z"
+    },
+    {
+      "url": "https://www.vikingcruises.com/oceans/cruise-destinations/caribbean-americas/south-america-chilean-fjords/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingcruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.196Z"
+    },
+    {
+      "url": "https://www.vikingcruises.com/oceans/cruise-destinations/caribbean-americas/west-indies-explorer/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingcruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.196Z"
+    },
+    {
+      "url": "https://www.vikingcruises.com/oceans/cruise-destinations/eastern-mediterranean/empires-mediterranean/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingcruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.196Z"
+    },
+    {
+      "url": "https://www.vikingcruises.com/oceans/cruise-destinations/eastern-mediterranean/greek-odyssey/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingcruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.196Z"
+    },
+    {
+      "url": "https://www.vikingcruises.com/oceans/cruise-destinations/europe/british-isles-and-ireland/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingcruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.196Z"
+    },
+    {
+      "url": "https://www.vikingcruises.com/oceans/cruise-destinations/europe/cities-antiquity/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingcruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.196Z"
+    },
+    {
+      "url": "https://www.vikingcruises.com/oceans/cruise-destinations/europe/iberia-france-and-england-explorer/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingcruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.196Z"
+    },
+    {
+      "url": "https://www.vikingcruises.com/oceans/cruise-destinations/europe/spain-and-portugal-discovery/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingcruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.196Z"
+    },
+    {
+      "url": "https://www.vikingcruises.com/oceans/cruise-destinations/multi-region/atlantic-and-mediterranean-horizons/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingcruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.196Z"
+    },
+    {
+      "url": "https://www.vikingcruises.com/oceans/cruise-destinations/multi-region/atlantic-ocean-passage/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingcruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.196Z"
+    },
+    {
+      "url": "https://www.vikingcruises.com/oceans/cruise-destinations/multi-region/from-iberia-to-the-northern-lights/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingcruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.196Z"
+    },
+    {
+      "url": "https://www.vikingcruises.com/oceans/cruise-destinations/multi-region/grand-fjords-and-iconic-viking-shores/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingcruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.196Z"
+    },
+    {
+      "url": "https://www.vikingcruises.com/oceans/cruise-destinations/multi-region/greenland-iceland-norway-and-beyond/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingcruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.196Z"
+    },
+    {
+      "url": "https://www.vikingcruises.com/oceans/cruise-destinations/multi-region/iberian-explorer/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingcruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.196Z"
+    },
+    {
+      "url": "https://www.vikingcruises.com/oceans/cruise-destinations/multi-region/iceland-british-isles-and-iberia/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingcruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.196Z"
+    },
+    {
+      "url": "https://www.vikingcruises.com/oceans/cruise-destinations/multi-region/iceland-norway-and-british-isles/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingcruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.196Z"
+    },
+    {
+      "url": "https://www.vikingcruises.com/oceans/cruise-destinations/multi-region/iconic-iceland-greenland-canada/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingcruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.196Z"
+    },
+    {
+      "url": "https://www.vikingcruises.com/oceans/cruise-destinations/multi-region/iconic-western-europe/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingcruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.196Z"
+    },
+    {
+      "url": "https://www.vikingcruises.com/oceans/cruise-destinations/multi-region/mediterranean-and-atlantic-crossing/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingcruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.196Z"
+    },
+    {
+      "url": "https://www.vikingcruises.com/oceans/cruise-destinations/multi-region/mediterranean-to-caribbean-sojourn/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingcruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.196Z"
+    },
+    {
+      "url": "https://www.vikingcruises.com/oceans/cruise-destinations/multi-region/mid-atlantic-crossing/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingcruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.196Z"
+    },
+    {
+      "url": "https://www.vikingcruises.com/oceans/cruise-destinations/multi-region/north-pacific-crossing/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingcruises.com",
+      "lastModified": "2025-08-21",
+      "discoveredAt": "2025-12-19T18:04:42.184Z"
+    },
+    {
+      "url": "https://www.vikingcruises.com/oceans/cruise-destinations/multi-region/southern-atlantic-crossing/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingcruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.196Z"
+    },
+    {
+      "url": "https://www.vikingcruises.com/oceans/cruise-destinations/multi-region/the-mediterranean-and-south-atlantic/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingcruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.196Z"
+    },
+    {
+      "url": "https://www.vikingcruises.com/oceans/cruise-destinations/multi-region/trade-routes-middle-ages/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingcruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.196Z"
+    },
+    {
+      "url": "https://www.vikingcruises.com/oceans/cruise-destinations/multi-region/west-indies-iberia/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingcruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.196Z"
+    },
+    {
+      "url": "https://www.vikingcruises.com/oceans/cruise-destinations/multi-region/west-indies-to-spain/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingcruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.196Z"
+    },
+    {
+      "url": "https://www.vikingcruises.com/oceans/cruise-destinations/ocean-river-voyages/grand-european-and-viking-fjords/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingcruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.196Z"
+    },
+    {
+      "url": "https://www.vikingcruises.com/oceans/cruise-destinations/ocean-river-voyages/iberian-odyssey/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingcruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.196Z"
+    },
+    {
+      "url": "https://www.vikingcruises.com/oceans/cruise-destinations/ocean-river-voyages/rhine-and-viking-shores-and-fjords/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingcruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.196Z"
+    },
+    {
+      "url": "https://www.vikingcruises.com/oceans/cruise-destinations/western-mediterranean/adriatic-and-mediterranean-discovery/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingcruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.196Z"
+    },
+    {
+      "url": "https://www.vikingcruises.com/oceans/cruise-destinations/western-mediterranean/adriatic-and-mediterranean-sojourn/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingcruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.196Z"
+    },
+    {
+      "url": "https://www.vikingcruises.com/oceans/cruise-destinations/western-mediterranean/aegean-and-mediterranean-explorer/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingcruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.196Z"
+    },
+    {
+      "url": "https://www.vikingcruises.com/oceans/cruise-destinations/western-mediterranean/amalfi-coast-africa-and-iberia/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingcruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.196Z"
+    },
+    {
+      "url": "https://www.vikingcruises.com/oceans/cruise-destinations/western-mediterranean/ancient-adriatic-treasures/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingcruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.196Z"
+    },
+    {
+      "url": "https://www.vikingcruises.com/oceans/cruise-destinations/western-mediterranean/ancient-mediterranean-antiquities/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingcruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.196Z"
+    },
+    {
+      "url": "https://www.vikingcruises.com/oceans/cruise-destinations/western-mediterranean/ancient-mediterranean-shores/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingcruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.196Z"
+    },
+    {
+      "url": "https://www.vikingcruises.com/oceans/cruise-destinations/western-mediterranean/ancient-mediterranean-treasures/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingcruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.196Z"
+    },
+    {
+      "url": "https://www.vikingcruises.com/oceans/cruise-destinations/western-mediterranean/antiquities-of-the-mediterranean/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingcruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.196Z"
+    },
+    {
+      "url": "https://www.vikingcruises.com/oceans/cruise-destinations/western-mediterranean/atlantic-crossing-and-mediterranean/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingcruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.196Z"
+    },
+    {
+      "url": "https://www.vikingcruises.com/oceans/cruise-destinations/western-mediterranean/gems-of-the-mediterranean/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingcruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.196Z"
+    },
+    {
+      "url": "https://www.vikingcruises.com/oceans/cruise-destinations/western-mediterranean/grand-mediterranean-explorer/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingcruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.196Z"
+    },
+    {
+      "url": "https://www.vikingcruises.com/oceans/cruise-destinations/western-mediterranean/iberia-and-mediterranean-antiquities/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingcruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.196Z"
+    },
+    {
+      "url": "https://www.vikingcruises.com/oceans/cruise-destinations/western-mediterranean/iberia-the-mediterranean-and-aegean/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingcruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.196Z"
+    },
+    {
+      "url": "https://www.vikingcruises.com/oceans/cruise-destinations/western-mediterranean/iberian-and-mediterranean-odyssey/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingcruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.196Z"
+    },
+    {
+      "url": "https://www.vikingcruises.com/oceans/cruise-destinations/western-mediterranean/iconic-adriatic-antiquities/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingcruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.196Z"
+    },
+    {
+      "url": "https://www.vikingcruises.com/oceans/cruise-destinations/western-mediterranean/iconic-mediterranean-treasures/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingcruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.196Z"
+    },
+    {
+      "url": "https://www.vikingcruises.com/oceans/cruise-destinations/western-mediterranean/iconic-western-mediterranean/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingcruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.196Z"
+    },
+    {
+      "url": "https://www.vikingcruises.com/oceans/cruise-destinations/western-mediterranean/icons-of-the-mediterranean/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingcruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.196Z"
+    },
+    {
+      "url": "https://www.vikingcruises.com/oceans/cruise-destinations/western-mediterranean/italian-sojourn/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingcruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.196Z"
+    },
+    {
+      "url": "https://www.vikingcruises.com/oceans/cruise-destinations/western-mediterranean/italy-adriatic-greece/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingcruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.196Z"
+    },
+    {
+      "url": "https://www.vikingcruises.com/oceans/cruise-destinations/western-mediterranean/italy-africa-and-iberia-discovery/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingcruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.196Z"
+    },
+    {
+      "url": "https://www.vikingcruises.com/oceans/cruise-destinations/western-mediterranean/jewels-of-the-mediterranean/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingcruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.196Z"
+    },
+    {
+      "url": "https://www.vikingcruises.com/oceans/cruise-destinations/western-mediterranean/journey-to-antiquities/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingcruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.196Z"
+    },
+    {
+      "url": "https://www.vikingcruises.com/oceans/cruise-destinations/western-mediterranean/malta-morocco-and-the-mediterranean/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingcruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.196Z"
+    },
+    {
+      "url": "https://www.vikingcruises.com/oceans/cruise-destinations/western-mediterranean/mediterranean-adriatic-sojourn/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingcruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.196Z"
+    },
+    {
+      "url": "https://www.vikingcruises.com/oceans/cruise-destinations/western-mediterranean/mediterranean-and-adriatic-odyssey/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingcruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.196Z"
+    },
+    {
+      "url": "https://www.vikingcruises.com/oceans/cruise-destinations/western-mediterranean/mediterranean-antiquities/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingcruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.196Z"
+    },
+    {
+      "url": "https://www.vikingcruises.com/oceans/cruise-destinations/western-mediterranean/mediterranean-discoveries/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingcruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.196Z"
+    },
+    {
+      "url": "https://www.vikingcruises.com/oceans/cruise-destinations/western-mediterranean/mediterranean-explorer/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingcruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.196Z"
+    },
+    {
+      "url": "https://www.vikingcruises.com/oceans/cruise-destinations/western-mediterranean/mediterranean-getaway/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingcruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.196Z"
+    },
+    {
+      "url": "https://www.vikingcruises.com/oceans/cruise-destinations/western-mediterranean/mediterranean-italian-sojourn/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingcruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.196Z"
+    },
+    {
+      "url": "https://www.vikingcruises.com/oceans/cruise-destinations/western-mediterranean/mediterranean-odyssey/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingcruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.196Z"
+    },
+    {
+      "url": "https://www.vikingcruises.com/oceans/cruise-destinations/western-mediterranean/mediterraneans-iconic-shores/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingcruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.196Z"
+    },
+    {
+      "url": "https://www.vikingcruises.com/oceans/cruise-destinations/western-mediterranean/spain-portugal-and-the-mediterranean/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingcruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.196Z"
+    },
+    {
+      "url": "https://www.vikingcruises.com/oceans/cruise-destinations/western-mediterranean/venice-adriatic-greece/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingcruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.196Z"
+    },
+    {
+      "url": "https://www.vikingcruises.com/oceans/cruise-destinations/world-grand/australia-asia-alaska/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingcruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.196Z"
+    },
+    {
+      "url": "https://www.vikingcruises.com/oceans/cruise-destinations/world-grand/far-east-alaska/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingcruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.196Z"
+    },
+    {
+      "url": "https://www.vikingcruises.com/oceans/cruise-destinations/world-grand/grand-pacific-explorer/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingcruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.196Z"
+    },
+    {
+      "url": "https://www.vikingcruises.com/oceans/cruise-destinations/world-grand/south-pacific-sojourn/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingcruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.196Z"
+    },
+    {
+      "url": "https://www.vikingcruises.com/oceans/cruise-destinations/world-grand/southeast-asia-horizons/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingcruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.196Z"
+    },
+    {
+      "url": "https://www.vikingcruises.com/oceans/cruise-destinations/world-grand/southeast-asia/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingcruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.196Z"
+    },
+    {
+      "url": "https://www.vikingcruises.com/oceans/cruise-destinations/world-grand/viking-world-cruise-2025-2026/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingcruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.196Z"
+    },
+    {
+      "url": "https://www.vikingcruises.com/oceans/cruise-destinations/world-grand/viking-world-cruise/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingcruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.196Z"
+    },
+    {
+      "url": "https://www.vikingcruises.com/oceans/cruise-destinations/world-grand/viking-world-discoveries/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingcruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.196Z"
+    },
+    {
+      "url": "https://www.vikingcruises.com/oceans/cruise-destinations/world-grand/viking-world-journeys/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingcruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.196Z"
+    },
+    {
+      "url": "https://www.vikingcruises.com/oceans/cruise-destinations/world-grand/viking-world-voyage-iii/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingcruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.196Z"
+    },
+    {
+      "url": "https://www.vikingcruises.com/oceans/cruise-destinations/world-grand/viking-world-voyage-iv/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingcruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.196Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/asia/magnificent-mekong/2025-hanoi-hochiminh/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/asia/magnificent-mekong/2025-hochiminh-hanoi/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/asia/magnificent-mekong/2026-hanoi-hochiminh/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/asia/magnificent-mekong/2026-hochiminh-hanoi/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/asia/magnificent-mekong/2027-hanoi-hochiminh/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/asia/magnificent-mekong/2027-hochiminh-hanoi/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/asia/magnificent-mekong/2028-hanoi-hochiminh/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/asia/magnificent-mekong/2028-hochiminh-hanoi/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/asia/wonders-of-india-i/2027-delhi-delhi/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/asia/wonders-of-india-i/2028-delhi-delhi/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/asia/wonders-of-india-ii/2027-delhi-delhi/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/asia/wonders-of-india-ii/2028-delhi-delhi/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/egypt/pharaohs-pyramids/2025-cairo-cairo/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/egypt/pharaohs-pyramids/2026-cairo-cairo/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/egypt/pharaohs-pyramids/2027-cairo-cairo/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/egypt/pharaohs-pyramids/2028-cairo-cairo/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/egypt/total-eclipse-on-the-nile/2027-cairo-cairo/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/europe/capitals-of-eastern-europe/2025-bucharest-vienna/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/europe/capitals-of-eastern-europe/2025-vienna-bucharest/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/europe/capitals-of-eastern-europe/2026-bucharest-vienna/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/europe/capitals-of-eastern-europe/2026-vienna-bucharest/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/europe/capitals-of-eastern-europe/2027-bucharest-vienna/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/europe/capitals-of-eastern-europe/2027-vienna-bucharest/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/europe/capitals-of-eastern-europe/2028-bucharest-vienna/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/europe/capitals-of-eastern-europe/2028-vienna-bucharest/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/europe/castles-vineyards-and-villages/2026-amsterdam-nuremberg/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/europe/castles-vineyards-and-villages/2026-nuremberg-amsterdam/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/europe/chateaux-rivers-wine/2025-bordeaux-bordeaux/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/europe/chateaux-rivers-wine/2026-bordeaux-bordeaux/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/europe/chateaux-rivers-wine/2027-bordeaux-bordeaux/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/europe/chateaux-rivers-wine/2028-bordeaux-bordeaux/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/europe/christmas-along-the-elbe/2025-berlin-prague/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/europe/christmas-along-the-elbe/2025-prague-berlin/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/europe/christmas-along-the-elbe/2026-berlin-prague/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/europe/christmas-along-the-elbe/2026-prague-berlin/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/europe/christmas-along-the-elbe/2027-berlin-prague/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/europe/christmas-along-the-elbe/2027-prague-berlin/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/europe/christmas-main-moselle/2025-paris-prague/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/europe/christmas-main-moselle/2025-prague-paris/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/europe/christmas-main-moselle/2026-paris-prague/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/europe/christmas-main-moselle/2026-prague-paris/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/europe/christmas-main-moselle/2027-paris-prague/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/europe/christmas-main-moselle/2027-prague-paris/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/europe/christmas-on-the-danube/2025-budapest-regensburg/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/europe/christmas-on-the-danube/2025-regensburg-budapest/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/europe/christmas-on-the-danube/2026-budapest-regensburg/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/europe/christmas-on-the-danube/2026-regensburg-budapest/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/europe/christmas-on-the-danube/2027-budapest-regensburg/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/europe/christmas-on-the-danube/2027-regensburg-budapest/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/europe/christmas-on-the-rhine-and-main/2025-basel-nuremberg/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/europe/christmas-on-the-rhine-and-main/2025-nuremberg-basel/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/europe/christmas-on-the-rhine-and-main/2026-basel-nuremberg/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/europe/christmas-on-the-rhine-and-main/2026-nuremberg-basel/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/europe/christmas-on-the-rhine-and-main/2027-basel-nuremberg/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/europe/christmas-on-the-rhine-and-main/2027-nuremberg-basel/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/europe/christmas-on-the-rhine/2025-amsterdam-basel/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/europe/christmas-on-the-rhine/2025-basel-amsterdam/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/europe/christmas-on-the-rhine/2026-amsterdam-basel/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/europe/christmas-on-the-rhine/2026-basel-amsterdam/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/europe/christmas-on-the-rhine/2027-amsterdam-basel/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/europe/christmas-on-the-rhine/2027-basel-amsterdam/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/europe/christmas-rhine-moselle/2025-paris-zurich/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/europe/christmas-rhine-moselle/2025-zurich-paris/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/europe/christmas-rhine-moselle/2026-paris-zurich/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/europe/christmas-rhine-moselle/2026-zurich-paris/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/europe/christmas-rhine-moselle/2027-paris-zurich/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/europe/christmas-rhine-moselle/2027-zurich-paris/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/europe/christmastime-in-paris-and-normandy/2025-paris-paris/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/europe/christmastime-in-paris-and-normandy/2026-paris-paris/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/europe/christmastime-in-paris-and-normandy/2027-paris-paris/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/europe/cities-light/2025-paris-prague/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/europe/cities-light/2025-prague-paris/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/europe/cities-light/2026-paris-prague/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/europe/cities-light/2026-prague-paris/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/europe/cities-light/2027-paris-prague/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/europe/cities-light/2027-prague-paris/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/europe/cities-light/2028-paris-prague/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/europe/cities-light/2028-prague-paris/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/europe/danube-christmas-delights/2025-budapest-passau/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/europe/danube-christmas-delights/2025-passau-budapest/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/europe/danube-christmas-delights/2026-budapest-passau/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/europe/danube-christmas-delights/2026-passau-budapest/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/europe/danube-christmas-delights/2027-budapest-passau/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/europe/danube-christmas-delights/2027-passau-budapest/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/europe/danube-waltz/2025-budapest-passau/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/europe/danube-waltz/2025-passau-budapest/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/europe/danube-waltz/2026-budapest-passau/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/europe/danube-waltz/2026-passau-budapest/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/europe/danube-waltz/2027-budapest-passau/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/europe/danube-waltz/2027-passau-budapest/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/europe/danube-waltz/2028-budapest-passau/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/europe/danube-waltz/2028-passau-budapest/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/europe/elegant-elbe/2025-berlin-prague/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/europe/elegant-elbe/2025-prague-berlin/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/europe/elegant-elbe/2026-berlin-prague/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/europe/elegant-elbe/2026-prague-berlin/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/europe/elegant-elbe/2027-berlin-prague/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/europe/elegant-elbe/2027-prague-berlin/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/europe/elegant-elbe/2028-berlin-prague/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/europe/elegant-elbe/2028-prague-berlin/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/europe/european-sojourn/2025-amsterdam-bucharest/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/europe/european-sojourn/2025-bucharest-amsterdam/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/europe/european-sojourn/2026-amsterdam-bucharest/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/europe/european-sojourn/2026-bucharest-amsterdam/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/europe/european-sojourn/2027-amsterdam-bucharest/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/europe/european-sojourn/2027-bucharest-amsterdam/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/europe/european-sojourn/2028-amsterdam-bucharest/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/europe/european-sojourn/2028-bucharest-amsterdam/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/europe/frances-finest/2025-avignon-paris/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/europe/frances-finest/2025-paris-avignon/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/europe/frances-finest/2026-avignon-paris/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/europe/frances-finest/2026-paris-avignon/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/europe/frances-finest/2027-avignon-paris/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/europe/frances-finest/2027-paris-avignon/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/europe/frances-finest/2028-avignon-paris/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/europe/frances-finest/2028-paris-avignon/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/europe/grand-european-tour/2025-amsterdam-budapest/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/europe/grand-european-tour/2025-budapest-amsterdam/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/europe/grand-european-tour/2026-amsterdam-budapest/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/europe/grand-european-tour/2026-budapest-amsterdam/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/europe/grand-european-tour/2027-amsterdam-budapest/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/europe/grand-european-tour/2027-budapest-amsterdam/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/europe/grand-european-tour/2028-amsterdam-budapest/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/europe/grand-european-tour/2028-budapest-amsterdam/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/europe/holland-and-belgium/2025-amsterdam-antwerp/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/europe/holland-and-belgium/2025-antwerp-amsterdam/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/europe/holland-and-belgium/2026-amsterdam-antwerp/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/europe/holland-and-belgium/2026-antwerp-amsterdam/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/europe/holland-and-belgium/2027-amsterdam-antwerp/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/europe/holland-and-belgium/2027-antwerp-amsterdam/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/europe/holland-and-belgium/2028-amsterdam-antwerp/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/europe/holland-and-belgium/2028-antwerp-amsterdam/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/europe/london-paris-d-day/2025-london-paris/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/europe/london-paris-d-day/2026-london-paris/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/europe/london-paris-d-day/2027-london-paris/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/europe/london-paris-d-day/2028-london-paris/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/europe/lyon-provence-and-the-rhineland/2025-amsterdam-avignon/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/europe/lyon-provence-and-the-rhineland/2025-avignon-amsterdam/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/europe/lyon-provence-and-the-rhineland/2026-amsterdam-avignon/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/europe/lyon-provence-and-the-rhineland/2026-avignon-amsterdam/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/europe/lyon-provence-and-the-rhineland/2027-amsterdam-avignon/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/europe/lyon-provence-and-the-rhineland/2027-avignon-amsterdam/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/europe/lyon-provence-and-the-rhineland/2028-amsterdam-avignon/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/europe/lyon-provence-and-the-rhineland/2028-avignon-amsterdam/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/europe/lyon-provence/2025-avignon-lyon/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/europe/lyon-provence/2025-lyon-avignon/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/europe/lyon-provence/2026-avignon-lyon/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/europe/lyon-provence/2026-lyon-avignon/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/europe/lyon-provence/2027-avignon-lyon/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/europe/lyon-provence/2027-lyon-avignon/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/europe/lyon-provence/2028-avignon-lyon/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/europe/lyon-provence/2028-lyon-avignon/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/europe/paris-heart-normandy/2025-paris-paris/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/europe/paris-heart-normandy/2026-paris-paris/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/europe/paris-heart-normandy/2027-paris-paris/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/europe/paris-heart-normandy/2028-paris-paris/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/europe/paris-swiss-alps/2025-paris-zurich/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/europe/paris-swiss-alps/2025-zurich-paris/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/europe/paris-swiss-alps/2026-paris-zurich/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/europe/paris-swiss-alps/2026-zurich-paris/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/europe/paris-swiss-alps/2027-paris-zurich/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/europe/paris-swiss-alps/2027-zurich-paris/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/europe/paris-swiss-alps/2028-paris-zurich/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/europe/paris-swiss-alps/2028-zurich-paris/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/europe/passage-eastern-europe/2025-bucharest-budapest/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/europe/passage-eastern-europe/2025-budapest-bucharest/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/europe/passage-eastern-europe/2026-bucharest-budapest/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/europe/passage-eastern-europe/2026-budapest-bucharest/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/europe/passage-eastern-europe/2027-bucharest-budapest/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/europe/passage-eastern-europe/2027-budapest-bucharest/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/europe/passage-eastern-europe/2028-bucharest-budapest/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/europe/passage-eastern-europe/2028-budapest-bucharest/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/europe/portugals-river-gold/2025-lisbon-porto/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/europe/portugals-river-gold/2026-lisbon-porto/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/europe/portugals-river-gold/2027-lisbon-porto/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/europe/portugals-river-gold/2028-lisbon-porto/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/europe/rhine-and-main-explorer/2025-basel-nuremberg/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/europe/rhine-and-main-explorer/2025-nuremberg-basel/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/europe/rhine-and-main-explorer/2026-basel-nuremberg/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/europe/rhine-and-main-explorer/2026-nuremberg-basel/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/europe/rhine-and-main-explorer/2027-basel-nuremberg/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/europe/rhine-and-main-explorer/2027-nuremberg-basel/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/europe/rhine-and-main-explorer/2028-basel-nuremberg/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/europe/rhine-and-main-explorer/2028-nuremberg-basel/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/europe/rhine-getaway/2025-amsterdam-basel/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/europe/rhine-getaway/2025-basel-amsterdam/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/europe/rhine-getaway/2026-amsterdam-basel/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/europe/rhine-getaway/2026-basel-amsterdam/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/europe/rhine-getaway/2027-amsterdam-basel/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/europe/rhine-getaway/2027-basel-amsterdam/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/europe/rhine-getaway/2028-amsterdam-basel/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/europe/rhine-getaway/2028-basel-amsterdam/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/europe/rhine-main-and-danube-odyssey/2026-basel-budapest/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/europe/rhine-main-and-danube-odyssey/2026-budapest-basel/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/europe/rhine-main-and-danube-odyssey/2028-basel-budapest/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/europe/rhine-main-and-danube-odyssey/2028-budapest-basel/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/europe/romantic-danube/2025-budapest-regensburg/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/europe/romantic-danube/2025-regensburg-budapest/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/europe/romantic-danube/2026-budapest-regensburg/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/europe/romantic-danube/2026-regensburg-budapest/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/europe/romantic-danube/2027-budapest-regensburg/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/europe/romantic-danube/2027-regensburg-budapest/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/europe/romantic-danube/2028-budapest-regensburg/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/europe/romantic-danube/2028-regensburg-budapest/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/europe/tulips-windmills/2026-amsterdam-amsterdam/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/europe/tulips-windmills/2027-amsterdam-amsterdam/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/europe/tulips-windmills/2028-amsterdam-amsterdam/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/mississippi/americas-great-river/2025-stpaul-neworleans/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/mississippi/americas-great-river/2026-stpaul-neworleans/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/mississippi/americas-great-river/2027-stpaul-neworleans/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/mississippi/heartland-of-america/2025-stlouisalton-stpaul/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/mississippi/heartland-of-america/2025-stpaul-stlouisalton/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/mississippi/heartland-of-america/2026-stlouisalton-stpaul/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/mississippi/heartland-of-america/2026-stpaul-stlouisalton/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/mississippi/heartland-of-america/2027-stlouisalton-stpaul/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/mississippi/heartland-of-america/2027-stpaul-stlouisalton/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/mississippi/mississippi-delta-explorer/2025-memphis-neworleans/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/mississippi/mississippi-delta-explorer/2025-neworleans-memphis/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/mississippi/mississippi-delta-explorer/2026-memphis-neworleans/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/mississippi/mississippi-delta-explorer/2026-neworleans-memphis/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/mississippi/mississippi-delta-explorer/2027-memphis-neworleans/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/mississippi/mississippi-delta-explorer/2027-neworleans-memphis/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/mississippi/mississippi-river-odyssey/2025-neworleans-stpaul/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/mississippi/mississippi-river-odyssey/2026-neworleans-stpaul/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/mississippi/mississippi-river-odyssey/2027-neworleans-stpaul/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/mississippi/nashville-memphis-and-the-cumberland/2026-memphis-nashville/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/mississippi/nashville-memphis-and-the-cumberland/2026-nashville-memphis/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/mississippi/nashville-memphis-and-the-cumberland/2027-memphis-nashville/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/mississippi/nashville-memphis-and-the-cumberland/2027-nashville-memphis/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/mississippi/new-orleans-and-southern-charms/2025-neworleans-neworleans/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/mississippi/new-orleans-and-southern-charms/2026-neworleans-neworleans/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/mississippi/new-orleans-and-southern-charms/2027-neworleans-neworleans/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/mississippi/new-orleans-to-memphis/2026-neworleans-memphis/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/mississippi/the-big-easy-to-the-gateway-city/2025-neworleans-stlouisalton/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/mississippi/the-big-easy-to-the-gateway-city/2026-neworleans-stlouisalton/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/mississippi/the-big-easy-to-the-gateway-city/2027-neworleans-stlouisalton/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/ocean-river-voyages/grand-european-and-viking-fjords/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/ocean-river-voyages/iberian-odyssey/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    },
+    {
+      "url": "https://www.vikingrivercruises.com/cruise-destinations/ocean-river-voyages/rhine-and-viking-shores-and-fjords/pricing.html",
+      "source": "sitemap",
+      "domain": "www.vikingrivercruises.com",
+      "lastModified": "2025-12-04",
+      "discoveredAt": "2025-12-19T18:04:42.209Z"
+    }
+  ]
+}
