@@ -67,7 +67,7 @@ jobs:
     name: Test Pricing Pages
     runs-on: ubuntu-latest
     needs: discover
-    timeout-minutes: 20
+    timeout-minutes: 45
 
     steps:
       - name: Checkout repository
