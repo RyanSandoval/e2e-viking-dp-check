@@ -26,8 +26,8 @@ export default defineConfig({
     ['list'],
   ],
 
-  // Global timeout: 30 minutes for full test run (388+ URLs)
-  globalTimeout: 30 * 60 * 1000,
+  // Global timeout: 2 hours for full test run (1500+ URLs)
+  globalTimeout: 120 * 60 * 1000,
 
   // Shared settings for all projects
   use: {
