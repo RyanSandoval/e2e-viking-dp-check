@@ -66,9 +66,11 @@ test.describe.configure({ mode: 'parallel' });
 
 // Generate individual tests for each URL - enables true parallel execution
 for (const urlInfo of pricingUrls) {
-  // Extract a short name for the test from the URL
-  const urlPath = new URL(urlInfo.url).pathname;
-  const shortName = urlPath.replace('/pricing.html', '').split('/').slice(-2).join('/');
+  // Extract a short name for the test from the URL (include domain for uniqueness)
+  const urlObj = new URL(urlInfo.url);
+  const domain = urlObj.hostname.replace('www.', '').replace('vikingcruises', 'vc').replace('.com', '');
+  const urlPath = urlObj.pathname.replace('/pricing.html', '').replace('/pricing', '').split('/').slice(-2).join('/');
+  const shortName = `[${domain}] ${urlPath}`;
 
   test(`Pricing: ${shortName}`, async ({ page }, testInfo) => {
     const result = await testPricingPage(page, urlInfo, testInfo);
