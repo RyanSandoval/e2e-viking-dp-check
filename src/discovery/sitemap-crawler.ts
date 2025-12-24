@@ -47,32 +47,36 @@ export class SitemapCrawler {
 
   /**
    * Crawl all configured sitemaps and discover pricing URLs
-   * Checks local files first, then falls back to remote URLs
+   * Uses local files if useLocalSitemaps is true, otherwise fetches remote
    */
   async discoverPricingUrls(): Promise<DiscoveredUrl[]> {
     console.log('🔍 Starting URL discovery from sitemaps...\n');
 
-    // First, try local sitemap files
-    const localSitemaps = await this.findLocalSitemaps();
+    // Check if we should use local sitemaps
+    if (config.useLocalSitemaps) {
+      const localSitemaps = await this.findLocalSitemaps();
 
-    if (localSitemaps.length > 0) {
-      console.log(`📂 Found ${localSitemaps.length} local sitemap file(s)\n`);
+      if (localSitemaps.length > 0) {
+        console.log(`📂 Found ${localSitemaps.length} local sitemap file(s)\n`);
 
-      for (const localPath of localSitemaps) {
-        try {
-          console.log(`📄 Processing local: ${localPath}`);
-          await this.processLocalSitemap(localPath);
-        } catch (error) {
-          console.error(`❌ Failed to process ${localPath}:`, error);
+        for (const localPath of localSitemaps) {
+          try {
+            console.log(`📄 Processing local: ${localPath}`);
+            await this.processLocalSitemap(localPath);
+          } catch (error) {
+            console.error(`❌ Failed to process ${localPath}:`, error);
+          }
         }
+      } else {
+        console.log('📂 No local sitemaps found in sitemaps/ directory\n');
       }
     } else {
-      console.log('📂 No local sitemaps found, trying remote URLs...\n');
+      // Fetch from remote URLs directly
+      console.log('🌐 Fetching sitemaps from remote URLs...\n');
 
-      // Fall back to remote URLs
       for (const sitemapUrl of config.sitemapUrls) {
         try {
-          console.log(`📄 Processing remote: ${sitemapUrl}`);
+          console.log(`📄 Fetching: ${sitemapUrl}`);
           await this.processRemoteSitemap(sitemapUrl);
         } catch (error) {
           console.error(`❌ Failed to process ${sitemapUrl}:`, error);
@@ -268,7 +272,7 @@ export class SitemapCrawler {
   }
 
   /**
-   * Fetch with timeout
+   * Fetch with timeout and browser-like headers to avoid 403 blocks
    */
   private async fetchWithTimeout(
     url: string,
@@ -281,8 +285,12 @@ export class SitemapCrawler {
       const response = await fetch(url, {
         signal: controller.signal,
         headers: {
-          'User-Agent': 'Viking-Pricing-Monitor/1.0 (Automated Testing)',
-          Accept: 'application/xml, text/xml, */*',
+          'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+          'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8',
+          'Accept-Language': 'en-US,en;q=0.9',
+          'Accept-Encoding': 'gzip, deflate, br',
+          'Cache-Control': 'no-cache',
+          'Pragma': 'no-cache',
         },
       });
       return response;
