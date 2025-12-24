@@ -13,92 +13,34 @@
  */
 
 import { test, expect, Page } from '@playwright/test';
-import * as fs from 'fs/promises';
+import * as fs from 'fs';
+import * as fsp from 'fs/promises';
 import * as path from 'path';
 import config from '../config.js';
 import { UrlManifest, DiscoveredUrl } from '../discovery/index.js';
 
-// Store JS errors per page
-const jsErrors: Map<string, string[]> = new Map();
-
-// Load the URL manifest
-let manifest: UrlManifest;
+// Load URLs synchronously at module load time for parallel test generation
 let pricingUrls: DiscoveredUrl[] = [];
 
-test.beforeAll(async () => {
-  try {
-    const content = await fs.readFile(config.output.manifestFile, 'utf-8');
-    manifest = JSON.parse(content);
-    pricingUrls = manifest.urls;
-    console.log(`Loaded ${pricingUrls.length} URLs from manifest`);
-  } catch (error) {
-    // If no manifest exists, use a sample URL for testing
-    console.warn('No manifest found, using sample URLs for testing');
-    pricingUrls = [
-      {
-        url: 'https://www.viking.com/cruises/ocean/viking-sky/british-isles-explorer/pricing.html',
-        source: 'sitemap',
-        domain: 'www.viking.com',
-        discoveredAt: new Date().toISOString(),
-      },
-    ];
-  }
-});
+try {
+  const content = fs.readFileSync(config.output.manifestFile, 'utf-8');
+  const manifest: UrlManifest = JSON.parse(content);
+  pricingUrls = manifest.urls;
+  console.log(`Loaded ${pricingUrls.length} URLs from manifest for parallel testing`);
+} catch (error) {
+  console.warn('No manifest found, using sample URL for testing');
+  pricingUrls = [
+    {
+      url: 'https://www.vikingcruises.com/oceans/cruise-destinations/caribbean/western-caribbean/pricing.html',
+      source: 'sitemap',
+      domain: 'www.vikingcruises.com',
+      discoveredAt: new Date().toISOString(),
+    },
+  ];
+}
 
-// Generate tests dynamically from manifest
-test.describe('Viking Pricing Page Monitor', () => {
-  test.describe.configure({ mode: 'parallel' });
-
-  // We need to generate tests at test discovery time, but we load URLs dynamically
-  // Playwright requires static test definitions, so we use a workaround
-  test('All pricing pages pass validation', async ({ page, browserName }, testInfo) => {
-    // Skip if no URLs to test
-    if (pricingUrls.length === 0) {
-      test.skip(true, 'No pricing URLs in manifest');
-      return;
-    }
-
-    // Set dynamic timeout: ~15 seconds per URL + 60 second buffer
-    const dynamicTimeout = (pricingUrls.length * 15000) + 60000;
-    test.setTimeout(dynamicTimeout);
-    console.log(`Testing ${pricingUrls.length} URLs with ${Math.round(dynamicTimeout / 60000)} minute timeout`);
-
-    const results: PricingPageResult[] = [];
-
-    // Test each URL
-    for (const urlInfo of pricingUrls) {
-      const result = await testPricingPage(page, urlInfo, testInfo);
-      results.push(result);
-
-      // Soft assertion - collect all results, don't fail immediately
-      if (!result.passed) {
-        testInfo.annotations.push({
-          type: 'failed-url',
-          description: `${urlInfo.url}: ${result.errors.join(', ')}`,
-        });
-      }
-    }
-
-    // Write results to file and get summary
-    const summaryText = await writeResults(results, testInfo);
-
-    // Attach summary to test report so it's visible in HTML report
-    await testInfo.attach('Test Summary', {
-      body: summaryText,
-      contentType: 'text/plain',
-    });
-
-    // Final assertion - fail if any pages failed
-    const failedPages = results.filter((r) => !r.passed);
-    const passedPages = results.filter((r) => r.passed);
-
-    if (failedPages.length > 0) {
-      const errorSummary = `${failedPages.length} pages failed, ${passedPages.length} pages passed:\n` +
-        failedPages.map((r) => `${r.url}: ${r.errors.join(', ')}`).join('\n');
-      expect(failedPages.length, errorSummary).toBe(0);
-    }
-  });
-});
+// Results collector for summary (shared across parallel tests)
+const allResults: PricingPageResult[] = [];
 
 interface PricingPageResult {
   url: string;
@@ -119,6 +61,35 @@ interface CheckResult {
   details?: string;
 }
 
+// Configure parallel execution
+test.describe.configure({ mode: 'parallel' });
+
+// Generate individual tests for each URL - enables true parallel execution
+for (const urlInfo of pricingUrls) {
+  // Extract a short name for the test from the URL (include domain for uniqueness)
+  const urlObj = new URL(urlInfo.url);
+  const domain = urlObj.hostname.replace('www.', '').replace('vikingcruises', 'vc').replace('.com', '');
+  const urlPath = urlObj.pathname.replace('/pricing.html', '').replace('/pricing', '').split('/').slice(-2).join('/');
+  const shortName = `[${domain}] ${urlPath}`;
+
+  test(`Pricing: ${shortName}`, async ({ page }, testInfo) => {
+    const result = await testPricingPage(page, urlInfo, testInfo);
+    allResults.push(result);
+
+    // Fail the test if critical checks failed
+    if (!result.passed) {
+      expect.soft(result.passed, `Failed: ${result.errors.join(', ')}`).toBe(true);
+    }
+  });
+}
+
+// After all tests, write summary
+test.afterAll(async () => {
+  if (allResults.length > 0) {
+    await writeResults(allResults);
+  }
+});
+
 /**
  * Test a single pricing page
  */
@@ -136,13 +107,11 @@ async function testPricingPage(
   // Collect JS errors
   const pageJsErrors: string[] = [];
   page.on('pageerror', (error) => {
-    // Only track errors from viking domains
     if (error.message.includes('viking')) {
       pageJsErrors.push(error.message);
     }
   });
 
-  // Track console errors
   page.on('console', (msg) => {
     if (msg.type() === 'error') {
       const text = msg.text();
@@ -185,10 +154,9 @@ async function testPricingPage(
 
     // Only run content checks if page loaded successfully
     if (httpStatus === 200) {
-      // Wait for dynamic content
       await page.waitForLoadState('networkidle').catch(() => {});
 
-      // Check 3: No error messages displayed (check FIRST before dates/prices)
+      // Check 3: No error messages displayed
       const errorMessageCheck = await checkForErrorMessages(page);
       checks.push(errorMessageCheck);
       if (!errorMessageCheck.passed) {
@@ -227,8 +195,7 @@ async function testPricingPage(
       checks.push({
         name: 'No Viking JS errors',
         passed: pageJsErrors.length === 0,
-        details:
-          pageJsErrors.length > 0 ? `${pageJsErrors.length} errors` : 'Clean',
+        details: pageJsErrors.length > 0 ? `${pageJsErrors.length} errors` : 'Clean',
       });
 
       if (pageJsErrors.length > 0) {
@@ -246,23 +213,17 @@ async function testPricingPage(
         .replace(/[^a-zA-Z0-9]/g, '_')
         .slice(0, 100);
 
-      screenshotPath = path.join(
-        config.output.screenshotsDir,
-        `${screenshotName}.png`
-      );
-
-      await fs.mkdir(config.output.screenshotsDir, { recursive: true });
+      screenshotPath = path.join(config.output.screenshotsDir, `${screenshotName}.png`);
+      await fsp.mkdir(config.output.screenshotsDir, { recursive: true });
       await page.screenshot({ path: screenshotPath, fullPage: true });
+
+      // Attach screenshot to test report
+      await testInfo.attach('screenshot', { path: screenshotPath });
     }
 
-    // Critical checks: HTTP status, no error messages, dates visible, prices present
+    // Critical checks determine pass/fail
     const criticalChecksFailed = checks
-      .filter((c) => [
-        'HTTP Status 200',
-        'No error messages',
-        'Departure dates visible',
-        'Valid prices present'
-      ].includes(c.name))
+      .filter((c) => ['HTTP Status 200', 'No error messages', 'Departure dates visible', 'Valid prices present'].includes(c.name))
       .some((c) => !c.passed);
 
     return {
@@ -278,7 +239,6 @@ async function testPricingPage(
       testedAt: new Date().toISOString(),
     };
   } catch (error) {
-    // Handle timeout or other navigation errors
     const errorMsg = error instanceof Error ? error.message : String(error);
     errors.push(errorMsg);
 
@@ -298,16 +258,12 @@ async function testPricingPage(
 
 /**
  * Check for error messages indicating no pricing data available
- * Only checks VISIBLE elements - ignores hidden divs with display:none
  */
 async function checkForErrorMessages(page: Page): Promise<CheckResult> {
-  // Known error message patterns
   const errorPatterns = [
-    // No available sailings message
     'Based on your selections there are no available sailings',
     'no available sailings',
     'Please adjust your filters to see all availability',
-    // Other potential error states
     'No sailings available',
     'No departures available',
     'Currently unavailable',
@@ -315,7 +271,6 @@ async function checkForErrorMessages(page: Page): Promise<CheckResult> {
     'Pricing not available',
   ];
 
-  // Check the specific "pricing-unavailable" div - only if it's visible
   const unavailablePanel = page.locator('#pricing-unavailable');
   if (await unavailablePanel.count() > 0) {
     const isVisible = await unavailablePanel.isVisible();
@@ -329,10 +284,7 @@ async function checkForErrorMessages(page: Page): Promise<CheckResult> {
     }
   }
 
-  // Check for error messages in visible text only
-  // Use locator with :visible pseudo-class or check visibility
   for (const errorMsg of errorPatterns) {
-    // Look for the text in visible elements only
     const locator = page.locator(`text="${errorMsg}"`).first();
     if (await locator.count() > 0) {
       try {
@@ -345,7 +297,7 @@ async function checkForErrorMessages(page: Page): Promise<CheckResult> {
           };
         }
       } catch {
-        // Element might have been removed, continue checking
+        // Element might have been removed
       }
     }
   }
@@ -361,7 +313,6 @@ async function checkForErrorMessages(page: Page): Promise<CheckResult> {
  * Check for departure dates on the page
  */
 async function checkDepartureDates(page: Page): Promise<CheckResult> {
-  // Look for common date patterns and elements
   const dateSelectors = [
     '[data-testid*="date"]',
     '[class*="departure"]',
@@ -372,7 +323,6 @@ async function checkDepartureDates(page: Page): Promise<CheckResult> {
     '[datetime]',
   ];
 
-  // Also check for date text patterns (Jun 27, Aug 1, etc. as seen in screenshots)
   const datePatterns = [
     /\b(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\s+\d{1,2}\b/i,
     /\b\d{1,2}\s+(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\b/i,
@@ -381,7 +331,6 @@ async function checkDepartureDates(page: Page): Promise<CheckResult> {
     /\d{4}-\d{2}-\d{2}/,
   ];
 
-  // Check for date elements
   for (const selector of dateSelectors) {
     const count = await page.locator(selector).count();
     if (count > 0) {
@@ -393,7 +342,6 @@ async function checkDepartureDates(page: Page): Promise<CheckResult> {
     }
   }
 
-  // Check page text for date patterns
   const pageText = await page.textContent('body') || '';
   for (const pattern of datePatterns) {
     const match = pageText.match(pattern);
@@ -415,7 +363,6 @@ async function checkDepartureDates(page: Page): Promise<CheckResult> {
 
 /**
  * Check for valid price values (not $0, not empty)
- * Looks for prices like $5,499, $6,499, $52,995 as seen in screenshots
  */
 async function checkPriceValues(page: Page): Promise<CheckResult> {
   const priceSelectors = [
@@ -429,7 +376,6 @@ async function checkPriceValues(page: Page): Promise<CheckResult> {
     '.rate',
   ];
 
-  // Price patterns: $X,XXX or $XX,XXX (must be > $0)
   const pricePattern = /\$[\d,]+(?:\.\d{2})?/g;
 
   for (const selector of priceSelectors) {
@@ -441,7 +387,6 @@ async function checkPriceValues(page: Page): Promise<CheckResult> {
       if (text) {
         const prices = text.match(pricePattern);
         if (prices) {
-          // Check that at least one price is not $0
           for (const price of prices) {
             const value = parseFloat(price.replace(/[$,]/g, ''));
             if (value > 0) {
@@ -457,7 +402,6 @@ async function checkPriceValues(page: Page): Promise<CheckResult> {
     }
   }
 
-  // Check full page text for prices
   const pageText = await page.textContent('body') || '';
   const prices = pageText.match(pricePattern);
 
@@ -483,7 +427,6 @@ async function checkPriceValues(page: Page): Promise<CheckResult> {
 
 /**
  * Check for stateroom/cabin category displays
- * Looks for: SUITE, VERANDA, FRENCH BALCONY, STANDARD, NORDIC BALCONY as seen in screenshots
  */
 async function checkStateroomCategories(page: Page): Promise<CheckResult> {
   const categorySelectors = [
@@ -496,23 +439,11 @@ async function checkStateroomCategories(page: Page): Promise<CheckResult> {
     '[data-testid*="cabin"]',
   ];
 
-  // Keywords from the screenshots
   const categoryKeywords = [
-    'suite',
-    'veranda',
-    'french balcony',
-    'nordic balcony',
-    'balcony',
-    'standard',
-    'penthouse',
-    'explorer',
-    'deluxe',
-    'category',
-    'stateroom',
-    'cabin',
+    'suite', 'veranda', 'french balcony', 'nordic balcony', 'balcony',
+    'standard', 'penthouse', 'explorer', 'deluxe', 'category', 'stateroom', 'cabin',
   ];
 
-  // Check for category elements
   for (const selector of categorySelectors) {
     const count = await page.locator(selector).count();
     if (count > 0) {
@@ -524,7 +455,6 @@ async function checkStateroomCategories(page: Page): Promise<CheckResult> {
     }
   }
 
-  // Check page text for category keywords
   const pageText = (await page.textContent('body') || '').toLowerCase();
   for (const keyword of categoryKeywords) {
     if (pageText.includes(keyword)) {
@@ -545,29 +475,18 @@ async function checkStateroomCategories(page: Page): Promise<CheckResult> {
 
 /**
  * Check for "Request Quote" or booking CTA button
- * Looks for: PRICE & BUILD, MORE INFO, Request a Quote as seen in screenshots
  */
 async function checkCTAButton(page: Page): Promise<CheckResult> {
   const ctaSelectors = [
-    'button:has-text("Price")',
-    'a:has-text("Price")',
-    'button:has-text("Build")',
-    'a:has-text("Build")',
-    'button:has-text("Request Quote")',
-    'a:has-text("Request Quote")',
-    'button:has-text("Request a Quote")',
-    'a:has-text("Request a Quote")',
-    'button:has-text("Book")',
-    'a:has-text("Book")',
-    'button:has-text("Reserve")',
-    'a:has-text("Reserve")',
-    'button:has-text("More Info")',
-    'a:has-text("More Info")',
-    '[data-testid*="cta"]',
-    '[class*="cta"]',
-    '[class*="book-now"]',
-    '[class*="request-quote"]',
-    '[class*="price-build"]',
+    'button:has-text("Price")', 'a:has-text("Price")',
+    'button:has-text("Build")', 'a:has-text("Build")',
+    'button:has-text("Request Quote")', 'a:has-text("Request Quote")',
+    'button:has-text("Request a Quote")', 'a:has-text("Request a Quote")',
+    'button:has-text("Book")', 'a:has-text("Book")',
+    'button:has-text("Reserve")', 'a:has-text("Reserve")',
+    'button:has-text("More Info")', 'a:has-text("More Info")',
+    '[data-testid*="cta"]', '[class*="cta"]',
+    '[class*="book-now"]', '[class*="request-quote"]', '[class*="price-build"]',
   ];
 
   for (const selector of ctaSelectors) {
@@ -595,9 +514,8 @@ async function checkCTAButton(page: Page): Promise<CheckResult> {
 
 /**
  * Write test results to file and print summary
- * Returns summary text for attachment to test report
  */
-async function writeResults(results: PricingPageResult[], testInfo?: any): Promise<string> {
+async function writeResults(results: PricingPageResult[]): Promise<void> {
   const passedResults = results.filter((r) => r.passed);
   const failedResults = results.filter((r) => !r.passed);
 
@@ -607,31 +525,22 @@ async function writeResults(results: PricingPageResult[], testInfo?: any): Promi
     passed: passedResults.length,
     failed: failedResults.length,
     warnings: results.filter((r) => r.warnings.length > 0).length,
-    avgLoadTimeMs:
-      results.reduce((sum, r) => sum + r.loadTimeMs, 0) / results.length || 0,
+    avgLoadTimeMs: results.reduce((sum, r) => sum + r.loadTimeMs, 0) / results.length || 0,
     results,
   };
 
   // Write JSON
-  await fs.writeFile(
-    config.output.resultsJson,
-    JSON.stringify(summary, null, 2),
-    'utf-8'
-  );
+  await fsp.writeFile(config.output.resultsJson, JSON.stringify(summary, null, 2), 'utf-8');
 
   // Write CSV
-  const csvHeader =
-    'URL,Domain,Passed,Load Time (ms),HTTP Status,Errors,Warnings,Tested At\n';
+  const csvHeader = 'URL,Domain,Passed,Load Time (ms),HTTP Status,Errors,Warnings,Tested At\n';
   const csvRows = results
-    .map(
-      (r) =>
-        `"${r.url}","${r.domain}",${r.passed},${r.loadTimeMs},${r.httpStatus},"${r.errors.join('; ')}","${r.warnings.join('; ')}","${r.testedAt}"`
-    )
+    .map((r) => `"${r.url}","${r.domain}",${r.passed},${r.loadTimeMs},${r.httpStatus},"${r.errors.join('; ')}","${r.warnings.join('; ')}","${r.testedAt}"`)
     .join('\n');
 
-  await fs.writeFile(config.output.resultsCsv, csvHeader + csvRows, 'utf-8');
+  await fsp.writeFile(config.output.resultsCsv, csvHeader + csvRows, 'utf-8');
 
-  // Build summary text
+  // Print summary
   const lines: string[] = [];
   lines.push('');
   lines.push('═══════════════════════════════════════════════════════════════');
@@ -643,20 +552,15 @@ async function writeResults(results: PricingPageResult[], testInfo?: any): Promi
   lines.push(`  Avg Load:      ${Math.round(summary.avgLoadTimeMs)}ms`);
   lines.push('═══════════════════════════════════════════════════════════════');
 
-  // Show passed URLs summary
   if (passedResults.length > 0) {
     lines.push('');
     lines.push(`PASSED URLs: ${passedResults.length} URLs passed all checks`);
-
-    // Show sample of passed URLs (first 10) if there are many
     const maxToShow = 10;
     if (passedResults.length <= maxToShow) {
-      // Show all if there are few
       for (const r of passedResults) {
         lines.push(`   ✓ ${r.url}`);
       }
     } else {
-      // Show first few with count of remaining
       for (let i = 0; i < maxToShow; i++) {
         lines.push(`   ✓ ${passedResults[i].url}`);
       }
@@ -664,39 +568,26 @@ async function writeResults(results: PricingPageResult[], testInfo?: any): Promi
     }
   }
 
-  // Show failed URLs grouped by error type
   if (failedResults.length > 0) {
     lines.push('');
     lines.push('FAILED URLs (grouped by error type):');
 
-    // Group by error type
     const errorGroups: Map<string, PricingPageResult[]> = new Map();
     for (const r of failedResults) {
-      // Categorize the error
       let errorType = 'Other';
       const errorStr = r.errors.join(', ');
 
-      if (errorStr.includes('HTTP 404')) {
-        errorType = 'HTTP 404 (Page Not Found)';
-      } else if (errorStr.includes('HTTP 5')) {
-        errorType = 'HTTP 5xx (Server Error)';
-      } else if (errorStr.includes('Unavailable panel visible')) {
-        errorType = 'Pricing Unavailable (Call for fares)';
-      } else if (errorStr.includes('No departure dates')) {
-        errorType = 'No Departure Dates';
-      } else if (errorStr.includes('No valid prices')) {
-        errorType = 'No Valid Prices';
-      } else if (errorStr.includes('timeout') || errorStr.includes('Timeout')) {
-        errorType = 'Page Load Timeout';
-      }
+      if (errorStr.includes('HTTP 404')) errorType = 'HTTP 404 (Page Not Found)';
+      else if (errorStr.includes('HTTP 5')) errorType = 'HTTP 5xx (Server Error)';
+      else if (errorStr.includes('Unavailable panel visible')) errorType = 'Pricing Unavailable (Call for fares)';
+      else if (errorStr.includes('No departure dates')) errorType = 'No Departure Dates';
+      else if (errorStr.includes('No valid prices')) errorType = 'No Valid Prices';
+      else if (errorStr.includes('timeout') || errorStr.includes('Timeout')) errorType = 'Page Load Timeout';
 
-      if (!errorGroups.has(errorType)) {
-        errorGroups.set(errorType, []);
-      }
+      if (!errorGroups.has(errorType)) errorGroups.set(errorType, []);
       errorGroups.get(errorType)!.push(r);
     }
 
-    // Sort error types by count (most common first)
     const sortedGroups = Array.from(errorGroups.entries()).sort((a, b) => b[1].length - a[1].length);
 
     for (const [errorType, urls] of sortedGroups) {
@@ -714,10 +605,5 @@ async function writeResults(results: PricingPageResult[], testInfo?: any): Promi
   lines.push(`CSV export:   ${config.output.resultsCsv}`);
   lines.push('───────────────────────────────────────────────────────────────');
 
-  const summaryText = lines.join('\n');
-
-  // Print to console
-  console.log(summaryText);
-
-  return summaryText;
+  console.log(lines.join('\n'));
 }

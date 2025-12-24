@@ -9,10 +9,13 @@ export interface VikingConfig {
   /** URL patterns to match for pricing pages */
   pricingPagePatterns: RegExp[];
 
-  /** Local directory containing sitemap XML files (checked first) */
+  /** Local directory containing sitemap XML files */
   localSitemapDir: string;
 
-  /** Remote sitemap URLs (fallback if no local files) */
+  /** Set to false to always fetch from remote URLs */
+  useLocalSitemaps: boolean;
+
+  /** Remote sitemap URLs */
   sitemapUrls: string[];
 
   /** Maximum concurrent requests during discovery */
@@ -54,15 +57,24 @@ export const config: VikingConfig = {
       enabled: true,
     },
     {
-      name: 'Viking Cruises (Oceans/Expeditions)',
+      name: 'Viking Cruises (US)',
       baseUrl: 'https://www.vikingcruises.com',
       enabled: true,
     },
     {
-      name: 'Viking River Cruises',
-      baseUrl: 'https://www.vikingrivercruises.com',
+      name: 'Viking Cruises (Australia)',
+      baseUrl: 'https://www.vikingcruises.com.au',
       enabled: true,
-      notes: 'May redirect to viking.com - verify behavior',
+    },
+    {
+      name: 'Viking Cruises (UK)',
+      baseUrl: 'https://www.vikingcruises.co.uk',
+      enabled: true,
+    },
+    {
+      name: 'Viking Cruises (Canada)',
+      baseUrl: 'https://www.vikingcruisescanada.com',
+      enabled: true,
     },
   ],
 
@@ -73,14 +85,18 @@ export const config: VikingConfig = {
     /\/prices\.html$/i,
   ],
 
-  // Local sitemap directory (checked first - put downloaded XML files here)
+  // Local sitemap directory (only used if useLocalSitemaps is true)
   localSitemapDir: 'sitemaps',
 
-  // Remote sitemap URLs (fallback if no local files found)
+  // Set to false to always fetch from remote URLs
+  useLocalSitemaps: false,
+
+  // Remote sitemap URLs (fetched directly - no local files needed)
   sitemapUrls: [
-    'https://www.viking.com/sitemap.xml',
     'https://www.vikingcruises.com/sitemap.xml',
-    'https://www.vikingrivercruises.com/sitemap.xml',
+    'https://www.vikingcruises.com.au/sitemap.xml',
+    'https://www.vikingcruises.co.uk/sitemap.xml',
+    'https://www.vikingcruisescanada.com/sitemap.xml',
   ],
 
   maxConcurrentDiscovery: 5,
