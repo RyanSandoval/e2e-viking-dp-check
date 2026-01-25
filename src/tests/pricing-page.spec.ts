@@ -363,6 +363,7 @@ async function checkDepartureDates(page: Page): Promise<CheckResult> {
 
 /**
  * Check for valid price values (not $0, not empty)
+ * Supports multiple currencies: $, £, €, A$, C$
  */
 async function checkPriceValues(page: Page): Promise<CheckResult> {
   const priceSelectors = [
@@ -376,7 +377,8 @@ async function checkPriceValues(page: Page): Promise<CheckResult> {
     '.rate',
   ];
 
-  const pricePattern = /\$[\d,]+(?:\.\d{2})?/g;
+  // Support multiple currency formats: $, £, €, A$, C$
+  const pricePattern = /(?:[$£€]|A\$|C\$)[\d,]+(?:\.\d{2})?/g;
 
   for (const selector of priceSelectors) {
     const elements = page.locator(selector);
@@ -388,7 +390,7 @@ async function checkPriceValues(page: Page): Promise<CheckResult> {
         const prices = text.match(pricePattern);
         if (prices) {
           for (const price of prices) {
-            const value = parseFloat(price.replace(/[$,]/g, ''));
+            const value = parseFloat(price.replace(/[$£€A$C$,]/g, ''));
             if (value > 0) {
               return {
                 name: 'Valid prices present',
@@ -407,7 +409,7 @@ async function checkPriceValues(page: Page): Promise<CheckResult> {
 
   if (prices) {
     for (const price of prices) {
-      const value = parseFloat(price.replace(/[$,]/g, ''));
+      const value = parseFloat(price.replace(/[$£€A$C$,]/g, ''));
       if (value > 0) {
         return {
           name: 'Valid prices present',
